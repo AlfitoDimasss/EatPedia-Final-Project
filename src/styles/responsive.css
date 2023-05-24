@@ -28,6 +28,14 @@
     font-size: 1em;
   }
 
+  main {
+    padding: 40px;
+  }
+
+  .jumbotron__image-box {
+    max-width: 75%;
+  }
+
   footer p {
     font-size: 1em;
   }
@@ -46,6 +54,53 @@
   .app-bar .app-bar__navigation ul li a {
     font-size: 1.25em;
     margin-right: 16px;
+  }
+
+  main {
+    padding: 48px;
+  }
+
+  .content {
+    max-width: 1280px;
+  }
+
+  .jumbotron {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+
+  .jumbotron__desc-container {
+    order: -1;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+  }
+
+  .jumbotron__desc-container h1 {
+    font-size: 4em;
+    width: 75%;
+  }
+
+  .jumbotron__desc-container p {
+    font-size: 1.5em;
+  }
+
+  .jumbotron__desc-container a {
+    text-align: center;
+    width: 30%;
+  }
+
+  .jumbotron__image-box {
+    width: 49%;
+  }
+
+  .jumbotron__image-box img {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    border-radius: 24px;
   }
 
   footer p {

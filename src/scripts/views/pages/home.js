@@ -1,12 +1,17 @@
+import Jumbotron from './components/jumbotron';
+
 const Home = {
   async render() {
     return `
-      <h2>Home Page</h2>
+      <div class="content" id="content"></div>
     `;
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const content = document.querySelector('.content');
+    content.innerHTML += `
+      ${Jumbotron()}
+    `;
   },
 };
 
