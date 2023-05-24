@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #1B191A;
+  --secondary: #E2E2E2;
+  --orange: #EAB049;
+  --font-primary: 'Quicksand', sans-serif;
+  --white: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  font-weight: 400;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*
+  AppBar
+*/
+
+.outer-app-bar {
+  background-color: var(--primary);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: var(--primary);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: var(--white);
+  font-size: 1.5em;
+  user-select: none;
+  font-weight: 700;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: var(--primary);
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+/*
+  Main Content
+*/
+
+main {
+  padding: 32px;
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-weight: normal;
+}
+
+
+/*
+  Footer
+*/
+
+footer {
+  padding: 16px;
+  background-color: var(--primary);
+}
+
+footer p {
+  text-align: center;
+  color: var(--white);
+  font-size: 0.75em;
+  font-weight: 500;
+}
