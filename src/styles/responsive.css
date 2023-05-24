@@ -36,6 +36,12 @@
     max-width: 75%;
   }
 
+  .latest-recipe__recipe-container {
+    max-width: 75%;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+  }
+
   footer p {
     font-size: 1em;
   }
@@ -86,6 +92,7 @@
 
   .jumbotron__desc-container p {
     font-size: 1.5em;
+    margin: 0 0 24px 0;
   }
 
   .jumbotron__desc-container a {
@@ -101,6 +108,33 @@
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     width: 100%;
     border-radius: 24px;
+  }
+
+  .latest-recipe h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+
+  .latest-recipe p {
+    font-size: 1em;
+    text-align: left;
+  }
+
+  .latest-recipe__recipe-container {
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 100%;
+  }
+
+  .recipe-item .recipe-item__content h3 {
+    font-size: 1em;
+  }
+
+  .recipe-item__content__icons__icon span {
+    font-size: 0.75em;
+  }
+
+  .recipe-item__content__icons__icon p {
+    font-size: 0.75em;
   }
 
   footer p {

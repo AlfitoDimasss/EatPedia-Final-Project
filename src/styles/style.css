@@ -109,10 +109,16 @@ main {
   min-height: 100%;
 }
 
+/*
+  Jumbotron
+*/
+
 .jumbotron {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* background-color: salmon; */
+  min-height: 460px;
 }
 
 .jumbotron__image-box {
@@ -139,7 +145,7 @@ main {
 .jumbotron__desc-container p {
   font-weight: 400;
   font-size: 1em;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
   width: 90%;
 }
 
@@ -159,6 +165,89 @@ main {
   border: 1px solid var(--orange);
 }
 
+/*
+  Jumbotron
+*/
+
+
+/*
+  Latest Recipe
+*/
+
+.latest-recipe {
+  min-height: 100px;
+  /* background-color: aqua; */
+  margin-top: 48px;
+}
+
+.latest-recipe h1 {
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.latest-recipe p {
+  font-weight: 400;
+  font-size: 0.9em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.latest-recipe__recipe-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.recipe-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.recipe-item__header {
+  position: relative;
+}
+
+.recipe-item .recipe-item__header .recipe-item__header__poster {
+  width: 100%;
+}
+
+.recipe-item .recipe-item__content {
+  padding: 8px;
+}
+
+.recipe-item .recipe-item__content h3 {
+  font-size: 0.75em;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.recipe-item .recipe-item__content h3 a {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.recipe-item__content__icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.recipe-item__content__icons__icon span {
+  font-size: 0.6em;
+}
+
+.recipe-item__content__icons__icon p {
+  font-size: 0.5em;
+}
 
 /*
   Footer
