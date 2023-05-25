@@ -28,7 +28,7 @@
     font-size: 1em;
   }
 
-  main {
+  .section {
     padding: 40px;
   }
 
@@ -39,7 +39,23 @@
   .latest-recipe__recipe-container {
     max-width: 75%;
     grid-template-columns: repeat(3, 1fr);
-    margin: 0 auto;
+    margin: 0 auto 40px;
+  }
+
+  .latest-recipe__btn-selengkapnya {
+    width: 25%;
+  }
+
+  .latest-recipe__decoration-1 {
+    width: 75px;
+    top: 5px;
+    right: 5px;
+  }
+
+  .latest-recipe__decoration-2 {
+    width: 60px;
+    bottom: 15px;
+    left: 15px;
   }
 
   footer p {
@@ -62,12 +78,12 @@
     margin-right: 16px;
   }
 
-  main {
-    padding: 48px;
-  }
-
   .content {
     max-width: 1280px;
+  }
+
+  .section {
+    padding: 48px;
   }
 
   .jumbotron {
@@ -126,7 +142,7 @@
   }
 
   .recipe-item .recipe-item__content h3 {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 
   .recipe-item__content__icons__icon span {
@@ -135,6 +151,22 @@
 
   .recipe-item__content__icons__icon p {
     font-size: 0.75em;
+  }
+
+  .latest-recipe__btn-selengkapnya {
+    width: 15%;
+  }
+
+  .latest-recipe__decoration-1 {
+    width: 80px;
+    top: 5px;
+    right: 5px;
+  }
+
+  .latest-recipe__decoration-2 {
+    width: 70px;
+    bottom: 15px;
+    left: 15px;
   }
 
   footer p {

@@ -100,7 +100,6 @@ body {
 */
 
 main {
-  padding: 32px;
   flex: 1;
 }
 
@@ -108,6 +107,16 @@ main {
   margin: 0 auto;
   min-height: 100%;
 }
+
+.section {
+  padding: 32px;
+  position: relative;
+}
+
+/*
+  Main Content
+*/
+
 
 /*
   Jumbotron
@@ -117,7 +126,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: salmon; */
   min-height: 460px;
 }
 
@@ -176,8 +184,6 @@ main {
 
 .latest-recipe {
   min-height: 100px;
-  /* background-color: aqua; */
-  margin-top: 48px;
 }
 
 .latest-recipe h1 {
@@ -198,6 +204,43 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  margin-bottom: 32px;
+}
+
+.latest-recipe__btn-selengkapnya {
+  text-decoration: none;
+  background-color: var(--orange);
+  color: var(--white);
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 1.2em;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+.latest-recipe__btn-selengkapnya:hover {
+  background-color: var(--white);
+  color: var(--orange);
+  border: 1px solid var(--orange);
+}
+
+.latest-recipe__decoration {
+  position: absolute;
+}
+
+.latest-recipe__decoration-1 {
+  width: 50px;
+  top: 5px;
+  right: 5px;
+}
+
+.latest-recipe__decoration-2 {
+  width: 30px;
+  bottom: 15px;
+  left: 15px;
 }
 
 .recipe-item {
@@ -236,6 +279,10 @@ main {
   -webkit-box-orient: vertical;
 }
 
+.recipe-item .recipe-item__content h3 a:hover {
+  color: var(--orange);
+}
+
 .recipe-item__content__icons {
   display: flex;
   justify-content: space-around;
@@ -248,6 +295,7 @@ main {
 .recipe-item__content__icons__icon p {
   font-size: 0.5em;
 }
+
 
 /*
   Footer
@@ -264,3 +312,7 @@ footer p {
   font-size: 0.75em;
   font-weight: 500;
 }
+
+/*
+  Footer
+*/
