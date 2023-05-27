@@ -15,6 +15,7 @@ const Home = {
     content.innerHTML += `
       ${Jumbotron()}
       ${LatestRecipe()}
+      ${Feature()}
     `;
     const recipeContainer = document.getElementById('recipeContainer');
     const recipes = await SpoonacularSource.latestRecipe();
