@@ -1,9 +1,10 @@
+import SpoonacularSource from '../../data/spoonacular-source';
+import { createRecipeItemTemplate } from '../templates/template-creator';
+import dummyData from '../../data/dummy-data.json';
 import Jumbotron from './components/jumbotron';
 import About from './components/about';
-import SpoonacularSource from '../../data/spoonacular-source';
-import LatestRecipe from './components/latest-recipe';
-import { createRecipeItemTemplate } from '../templates/template-creator';
 import Feature from './components/feature';
+import LatestRecipe from './components/latest-recipe';
 
 const Home = {
   async render() {
@@ -20,12 +21,12 @@ const Home = {
       ${Feature()}
       ${LatestRecipe()}
     `;
-    // const recipeContainer = document.getElementById('recipeContainer');
+    const recipeContainer = document.getElementById('recipeContainer');
     // const recipes = await SpoonacularSource.latestRecipe();
-    // console.log(recipes);
-    // recipes.forEach((recipe) => {
-    //   recipeContainer.innerHTML += createRecipeItemTemplate(recipe);
-    // });
+    const recipes = dummyData;
+    recipes.forEach((recipe) => {
+      recipeContainer.innerHTML += createRecipeItemTemplate(recipe);
+    });
   },
 };
 

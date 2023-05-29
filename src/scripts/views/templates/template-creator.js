@@ -27,17 +27,9 @@ const createRecipeItemTemplate = (recipe) => `
 </div>
 `;
 
-const createRecipeItemTemplate2 = (recipe) => `
-  <div class="recipe-item">
-    <div class="recipe-item__header">
-      <img class="recipe-item__header__poster" alt="${recipe.title}"
-           src="${recipe.image || 'https://picsum.photos/id/666/800/450?grayscale'}">
-    </div>
-    <div class="recipe-item__content">
-      <h3><a href="#">${recipe.title}</a></h3>
-    </div>
-
+const createRecipeDetailTemplate = (recipe) => `
+  <div class="recipe">
   </div>
 `;
 
-export { createRecipeItemTemplate, createRecipeItemTemplate2 };
+export { createRecipeItemTemplate, createRecipeDetailTemplate };
