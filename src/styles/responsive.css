@@ -44,30 +44,28 @@
 
   .about {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    min-height: 550px;
   }
-  
-  .about__desc h1{
-    font-weight: 700;
-    font-size: 28px;
-    margin-bottom: 16px;
-    text-align: center;
-    
-  }
-  
-  .about__desc p {
-    font-weight: 400;
-    font-size: 16px;
-    margin: 0 auto 12px;
-    text-align: center;
-  }
-  
-  .about__image {
-    max-width: 75%;
 
-  
+  .about__image {
+    width: 50%;
+  }
+
+  .about__desc {
+    width: 50%;
+  }
+
+  .about__desc h1 {
+    font-size: 2em;
+    text-align: right;
+  }
+
+  .about__desc p {
+    font-size: 16px;
+    text-align: right;
+  }
+
   .feature_container_card h3 {
     font-size: 1em;
   }
@@ -81,9 +79,9 @@
   }
 
   .feature__decoration-1 {
-  width: 120px;
-  top: 5px;
-  right: 5px;
+    width: 120px;
+    top: 5px;
+    right: 5px;
   }
 
   .feature__decoration-2 {
@@ -143,6 +141,7 @@
     font-size: 1em;
   }
 }
+
 
 @media screen and (min-width: 1280px) {
   .app-bar {
@@ -208,32 +207,26 @@
   }
 
   .about {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    min-height: 550px;
+    gap: 2%;
+    flex-wrap: wrap;
   }
-  
-  .about__desc h1{
-    font-weight: 700;
-    font-size: 48px;
-    margin-bottom: 16px;
-    text-align: right;
-    
-  }
-  
-  .about__desc p {
-    font-weight: 400;
-    font-size: 24px;
-    margin: 0 auto 24px;
-    text-align: right;
-  }
-  
-  .about__image {
-   width: 150%;
-   height: 150%;
 
-  
+  .about__desc h1 {
+    font-size: 48px;
+    text-align: right;
+
+  }
+
+  .about__desc p {
+    font-size: 1.2em;
+    text-align: right;
+  }
+
+  .about__image {
+    width: 48%;
+  }
+
+
   .feature h1 {
     font-size: 2em;
   }

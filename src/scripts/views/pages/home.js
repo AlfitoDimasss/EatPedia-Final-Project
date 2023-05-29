@@ -20,12 +20,12 @@ const Home = {
       ${Feature()}
       ${LatestRecipe()}
     `;
-    const recipeContainer = document.getElementById('recipeContainer');
-    const recipes = await SpoonacularSource.latestRecipe();
-    console.log(recipes);
-    recipes.forEach((recipe) => {
-      recipeContainer.innerHTML += createRecipeItemTemplate(recipe);
-    });
+    // const recipeContainer = document.getElementById('recipeContainer');
+    // const recipes = await SpoonacularSource.latestRecipe();
+    // console.log(recipes);
+    // recipes.forEach((recipe) => {
+    //   recipeContainer.innerHTML += createRecipeItemTemplate(recipe);
+    // });
   },
 };
 
