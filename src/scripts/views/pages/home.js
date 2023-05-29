@@ -1,4 +1,5 @@
 import Jumbotron from './components/jumbotron';
+import About from './components/about';
 import SpoonacularSource from '../../data/spoonacular-source';
 import LatestRecipe from './components/latest-recipe';
 import { createRecipeItemTemplate } from '../templates/template-creator';
@@ -15,6 +16,7 @@ const Home = {
     const content = document.querySelector('.content');
     content.innerHTML += `
       ${Jumbotron()}
+      ${About()}
       ${Feature()}
       ${LatestRecipe()}
     `;

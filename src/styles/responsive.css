@@ -41,6 +41,32 @@
   .jumbotron__image-box {
     max-width: 75%;
   }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 550px;
+  }
+  
+  .about__desc h1{
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 16px;
+    text-align: center;
+    
+  }
+  
+  .about__desc p {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0 auto 12px;
+    text-align: center;
+  }
+  
+  .about__image {
+    max-width: 75%;
+
   
   .feature_container_card h3 {
     font-size: 1em;
@@ -88,6 +114,7 @@
     width: 70px;
     bottom: 5px;
     left: 110px;
+
   }
 
   .latest-recipe__recipe-container {
@@ -179,6 +206,33 @@
     width: 100%;
     border-radius: 24px;
   }
+
+  .about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 550px;
+  }
+  
+  .about__desc h1{
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 16px;
+    text-align: right;
+    
+  }
+  
+  .about__desc p {
+    font-weight: 400;
+    font-size: 24px;
+    margin: 0 auto 24px;
+    text-align: right;
+  }
+  
+  .about__image {
+   width: 150%;
+   height: 150%;
+
   
   .feature h1 {
     font-size: 2em;
@@ -190,6 +244,7 @@
 
   .feature_container_card p {
     font-size: 1em;
+
   }
 
   .latest-recipe h1 {
