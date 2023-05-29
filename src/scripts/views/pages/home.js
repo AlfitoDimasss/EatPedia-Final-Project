@@ -5,6 +5,7 @@ import Jumbotron from './components/jumbotron';
 import About from './components/about';
 import Feature from './components/feature';
 import LatestRecipe from './components/latest-recipe';
+import Team from './components/team';
 
 const Home = {
   async render() {
@@ -20,6 +21,7 @@ const Home = {
       ${About()}
       ${Feature()}
       ${LatestRecipe()}
+      ${Team()}
     `;
     const recipeContainer = document.getElementById('recipeContainer');
     // const recipes = await SpoonacularSource.latestRecipe();
