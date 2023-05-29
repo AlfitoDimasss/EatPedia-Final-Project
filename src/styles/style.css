@@ -178,6 +178,7 @@ main {
 */
 
 /*
+
   About
 */
 .about {
@@ -204,6 +205,94 @@ main {
 /*
 About
 */
+
+  Feature
+*/
+
+.feature {
+  min-height: 100px;
+  text-align: center;
+}
+
+.feature h1 {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+.feature p {
+  font-weight: 400;
+  font-size: 0.9em;
+  margin-bottom: 16px;
+}
+
+.feature i {
+  font-size: 25px;
+}
+
+.feature_container_card h3 {
+  font-weight: 600;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.feature_container {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  max-width: 75%;
+  margin: 0 auto 40px;
+}
+
+.feature_container_card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.feature__decoration{
+  position: absolute;
+}
+
+.feature__decoration-1 {
+  width: 60px;
+  top: 5px;
+  right: 5px;
+}
+
+.feature__decoration-2 {
+  width: 35px;
+  top: 10px;
+  right: 70px;
+}
+
+.feature__decoration-3 {
+  width: 25px;
+  top: 60px;
+  right: 3px;
+}
+
+.feature__decoration-4 {
+  width: 40px;
+  top: 90px;
+  right: 3px;
+}
+
+.feature__decoration-5 {
+  width: 70px;
+  bottom: 15px;
+  left: 10px;
+}
+
+.feature__decoration-6 {
+  width: 45px;
+  bottom: 5px;
+  left: 70px;
+}
+
 
 /*
   Latest Recipe

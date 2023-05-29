@@ -3,6 +3,7 @@ import About from './components/about';
 import SpoonacularSource from '../../data/spoonacular-source';
 import LatestRecipe from './components/latest-recipe';
 import { createRecipeItemTemplate } from '../templates/template-creator';
+import Feature from './components/feature';
 
 const Home = {
   async render() {
@@ -16,6 +17,7 @@ const Home = {
     content.innerHTML += `
       ${Jumbotron()}
       ${About()}
+      ${Feature()}
       ${LatestRecipe()}
     `;
     const recipeContainer = document.getElementById('recipeContainer');
