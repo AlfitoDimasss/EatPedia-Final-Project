@@ -497,23 +497,15 @@ About
 
 .recipes__filter-wrapper {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   padding: 75px 0px;
-  /* Location of the box */
   left: 0;
   top: 0px;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
 }
 
 .recipes__filter {
@@ -580,6 +572,11 @@ About
   border-radius: 10px;
 }
 
+.article-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
 
 
 /*
@@ -604,8 +601,10 @@ footer p {
 
 .filter-button {
   text-align: center;
+  font-size: 0.8em;
 }
 
-.filter-button:hover {
-  color: #EAB049;
+.filter-button span {
+  color: var(--orange);
+  font-weight: 600;
 }

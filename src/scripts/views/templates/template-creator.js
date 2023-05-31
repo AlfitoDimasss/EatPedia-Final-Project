@@ -27,9 +27,11 @@ const createRecipeItemTemplate = (recipe) => `
 </div>
 `;
 
-const createRecipeDetailTemplate = (recipe) => `
-  <div class="recipe">
+const createArticleItemTemplate = (article) => `
+  <div class="article-item">
+    <p>${article.title}</p>
+    <p>${article.description}</p>
   </div>
 `;
 
-export { createRecipeItemTemplate, createRecipeDetailTemplate };
+export { createRecipeItemTemplate, createArticleItemTemplate };

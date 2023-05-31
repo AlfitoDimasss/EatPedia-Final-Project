@@ -2,7 +2,7 @@
   .feature_container {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .team_container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -140,15 +140,15 @@
     bottom: 15px;
     left: 15px;
   }
-  
+
   .team_container {
     grid-template-columns: repeat(4, 1fr);
   }
 
   .team__decoration-1 {
-  width: 80px;
-  bottom: 5px;
-  left: 18px;
+    width: 80px;
+    bottom: 5px;
+    left: 18px;
   }
 
   .team__decoration-2 {
@@ -156,6 +156,27 @@
     top: 10px;
     right: 8px;
   }
+
+  .filter-button {
+    display: none;
+  }
+
+  .recipes-wrapper {
+    display: flex;
+  }
+
+  .recipes__filter-wrapper {
+    display: block;
+    position: static;
+    padding: 0px;
+    width: 30%;
+    background-color: transparent;
+  }
+
+  .recipes__filter {
+    width: 100%;
+  }
+
 
   footer p {
     font-size: 1em;
@@ -301,6 +322,13 @@
     width: 70px;
     bottom: 15px;
     left: 15px;
+  }
+
+  .recipes__filter-wrapper {
+    display: block;
+    position: static;
+    padding: 0px;
+    width: 25%;
   }
 
   footer p {
