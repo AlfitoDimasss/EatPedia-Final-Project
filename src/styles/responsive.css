@@ -156,9 +156,21 @@
     top: 10px;
     right: 8px;
   }
+  
+  .recipes-search_wrapper i {
+    padding: 9.8px 20px 11.8px;
+  }
+
+  .recipes-search {
+    font-size: 0.9em;
+  }
 
   .filter-button {
     display: none;
+  }
+  
+  .recipes-title {
+    font-size: 1.6em;
   }
 
   .recipes-wrapper {
@@ -169,15 +181,27 @@
     display: block;
     position: static;
     padding: 0px;
-    width: 30%;
+    width: 70%;
     background-color: transparent;
   }
 
   .recipes__filter {
     width: 100%;
   }
+  
+  .recipe-list_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
 
-
+  .recipes_pages a {
+    padding: 10px;
+    font-size: 0.9em;
+    margin: -5px;
+  }
+  
   footer p {
     font-size: 1em;
   }
@@ -328,7 +352,11 @@
     display: block;
     position: static;
     padding: 0px;
-    width: 25%;
+    width: 70%;
+  }
+  
+  .recipe-list_container {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   footer p {

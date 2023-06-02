@@ -29,7 +29,7 @@ const FilterCard = () => `
       </div>
       <hr class="hr-form">
       <label for="diet">Diet</label>
-      <div id="diet">
+      <div id="diet" class="recipes__filter-diet">
         <input type="checkbox" id="vehicle1" value="Bike">
         <label for="vehicle1" class="label-inner-checkbox"> Vegetarian</label><br>
         <input type="checkbox" id="vehicle2" value="Car">
@@ -38,8 +38,8 @@ const FilterCard = () => `
         <label for="vehicle3" class="label-inner-checkbox"> Gluten Free</label><br>
       </div>
       <hr class="hr-form">
-      <label for="diet">Alergi</label>
-      <div id="diet">
+      <label for="alergi">Alergi</label>
+      <div id="alergi" class="recipes__filter-allergy">
         <input type="checkbox" id="vehicle1" value="Bike">
         <label for="vehicle1" class="label-inner-checkbox"> Kacang</label><br>
         <input type="checkbox" id="vehicle2" value="Car">
@@ -47,7 +47,9 @@ const FilterCard = () => `
         <input type="checkbox" id="vehicle3" value="Boat">
         <label for="vehicle3" class="label-inner-checkbox"> Seafood</label><br>
       </div>
-      <button type"button">Search</button>
+      <div class="recipes__allergy-button-wrapper">
+        <button type"button" class="recipes__filter-button">Search</button>
+      </div>
     </form>
   </div>
 </div>
