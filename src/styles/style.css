@@ -578,6 +578,86 @@ About
   gap: 20px;
 }
 
+.recipes__filter-diet {
+  margin-bottom: 15px;
+}
+
+.recipes__filter-allergy {
+  margin-bottom: 10px;
+}
+
+.recipes__allergy-button-wrapper {
+  text-align: center;
+}
+
+.recipes__filter-button {
+  border: none;
+  background-color: #1B191A;
+  color: #fff;
+  padding: 8px;
+  border-radius: 20px;
+  font-weight: 500;
+  width: 100%;
+}
+
+/*
+  Recipe List
+*/
+
+.recipes-search_wrapper {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.recipes-search_wrapper a {
+  padding: 16px 0px;
+}
+
+.recipes-search_wrapper i {
+  background-color: var(--primary);
+  padding: 6.8px 20px 11px;
+  border-radius: 0px 20px 20px 0px;
+  margin: -6px;
+}
+
+.recipes-search {
+  padding: 8px 20px;
+  border-radius: 20px 0px 0px 20px;
+  border-color: var(--primary);
+  font-size: 0.7em;
+  margin-bottom: 10px;
+}
+
+.recipes-title {
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.recipe-list_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 20px;
+}
+
+.recipes_pages {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.recipes_pages a {
+  text-decoration: none;
+  background-color: #1B191A;
+  color: #fff;
+  padding: 8px;
+  font-size: 0.8em;
+  margin: -5px;
+}
 
 /*
   Footer
