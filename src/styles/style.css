@@ -495,7 +495,60 @@ About
   right: 8px;
 }
 
-.recipes__filter-wrapper {
+/*
+  Recipe List
+*/
+
+.recipes__search-bar {
+  text-align: center;
+}
+
+.recipes__search-bar a {
+  padding: 18px 0px;
+}
+
+.recipes__search-bar i {
+  background-color: var(--primary);
+  padding: 6.8px 20px 11px;
+  border-radius: 0px 20px 20px 0px;
+  margin: -6px;
+}
+
+.recipes__search-bar input {
+  padding: 8px 20px;
+  border-radius: 20px 0px 0px 20px;
+  border-color: var(--primary);
+  font-size: 0.7em;
+  margin-bottom: 10px;
+}
+
+.recipes__filter-toggle {
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: -8px;
+  margin-bottom: 12px;
+}
+
+.recipes__filter-toggle span {
+  color: var(--orange);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.recipes__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3em;
+  margin-bottom: 18px;
+}
+
+.recipes__recipe-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.recipes__filter-card-wrapper {
   display: none;
   position: fixed;
   z-index: 1;
@@ -508,16 +561,29 @@ About
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.recipes__filter {
+.recipes__filter-card {
   background-color: var(--orange);
   padding: 16px 32px;
   border-radius: 20px;
   width: 75%;
   margin: 0 auto;
-  min-height: 120%;
 }
 
-.recipes__filter h5 {
+.recipes__filter-card__close {
+  color: var(--white);
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.recipes__filter-card__close:hover,
+.recipes__filter-card__close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.recipes__filter-card h5 {
   color: var(--white);
   text-align: center;
   font-size: 1.2em;
@@ -525,27 +591,27 @@ About
   margin-bottom: 16px;
 }
 
-.recipes__filter label {
+.recipes__filter-card label {
   color: white;
   font-weight: 600;
   display: block;
   margin-bottom: 8px;
 }
 
-.recipes__filter .label-inner {
+.recipes__filter-card .label-inner {
   font-weight: 500;
   display: block;
   margin-bottom: 8px;
   font-size: 0.9em;
 }
 
-.recipes__filter .label-inner-checkbox {
+.recipes__filter-card .label-inner-checkbox {
   font-weight: 500;
   display: inline;
   font-size: 0.8em;
 }
 
-.recipes__filter__food-type {
+.recipes__filter-card select {
   border: none;
   background-color: var(--white);
   width: 100%;
@@ -553,18 +619,18 @@ About
   padding: 4px;
 }
 
-.hr-form {
+.recipes__filter-card hr {
   margin: 12px 0px;
   border: 1px solid var(--white);
 }
 
-.recipes__filter__calori-wrapper {
+.recipes__filter-card__nutrition-wrapper {
   display: flex;
   gap: 10%;
   margin-bottom: 8px;
 }
 
-.recipes__filter__calori {
+.recipes__filter-card__nutrition-wrapper input {
   width: 50%;
   border: none;
   background-color: var(--white);
@@ -572,25 +638,19 @@ About
   border-radius: 10px;
 }
 
-.article-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.recipes__filter-diet {
+.recipes__filter-card__diet {
   margin-bottom: 15px;
 }
 
-.recipes__filter-allergy {
+.recipes__filter-card__allergy {
   margin-bottom: 10px;
 }
 
-.recipes__allergy-button-wrapper {
+.recipes__filter-button-wrapper {
   text-align: center;
 }
 
-.recipes__filter-button {
+.recipes__filter-button-wrapper button {
   border: none;
   background-color: #1B191A;
   color: #fff;
@@ -600,63 +660,12 @@ About
   width: 100%;
 }
 
-/*
-  Recipe List
-*/
-
-.recipes-search_wrapper {
-  text-align: center;
-  margin: 0;
-  padding: 0;
+.recipes__filter-button__mobile {
+  display: block;
 }
 
-.recipes-search_wrapper a {
-  padding: 16px 0px;
-}
-
-.recipes-search_wrapper i {
-  background-color: var(--primary);
-  padding: 6.8px 20px 11px;
-  border-radius: 0px 20px 20px 0px;
-  margin: -6px;
-}
-
-.recipes-search {
-  padding: 8px 20px;
-  border-radius: 20px 0px 0px 20px;
-  border-color: var(--primary);
-  font-size: 0.7em;
-  margin-bottom: 10px;
-}
-
-.recipes-title {
-  text-align: center;
-  padding: 10px;
-  font-weight: 600;
-  font-size: 1.3em;
-}
-
-.recipe-list_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 32px;
-  padding: 20px;
-}
-
-.recipes_pages {
-  display: flex;
-  gap: 6px;
-  justify-content: center;
-}
-
-.recipes_pages a {
-  text-decoration: none;
-  background-color: #1B191A;
-  color: #fff;
-  padding: 8px;
-  font-size: 0.8em;
-  margin: -5px;
+.recipes__filter-button__desktop {
+  display: none;
 }
 
 /*
@@ -678,13 +687,3 @@ footer p {
 /*
   Footer
 */
-
-.filter-button {
-  text-align: center;
-  font-size: 0.8em;
-}
-
-.filter-button span {
-  color: var(--orange);
-  font-weight: 600;
-}
