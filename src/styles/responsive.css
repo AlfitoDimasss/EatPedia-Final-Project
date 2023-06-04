@@ -175,6 +175,12 @@
     width: 50%;
   }
 
+  .article__article-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
   footer p {
     font-size: 1em;
   }
@@ -365,6 +371,12 @@
 
   .recipes__filter-button__desktop {
     display: block;
+  }
+
+  .article__article-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
   }
 
   footer p {

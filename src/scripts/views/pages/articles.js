@@ -13,12 +13,13 @@ const Articles = {
     const content = document.querySelector('.content');
     content.innerHTML += `
     <section class="section">
-      <div class="article-container" id="articleContainer"></div>
+      <h1 class="recipes__title">Semua Artikel</h1>
+      <div class="article__article-container" id="articleContainer"></div>
     </section>
     `;
     const articleContainer = document.getElementById('articleContainer');
-    // const articles = await EatpediaAPISource.getArticles();
-    const articles = dummyArticle;
+    const articles = await EatpediaAPISource.getArticles();
+    // const articles = dummyArticle;
     articles.forEach((article) => {
       articleContainer.innerHTML += createArticleItemTemplate(article);
     });
