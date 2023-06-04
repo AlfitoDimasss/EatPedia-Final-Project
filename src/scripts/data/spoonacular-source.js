@@ -12,6 +12,12 @@ class SpoonacularSource {
     const responseJson = await response.json();
     return responseJson.results;
   }
+
+  static async searchRecipeByQueryLink(query) {
+    const response = await fetch(query);
+    const responseJson = await response.json();
+    return responseJson.results;
+  }
 }
 
 export default SpoonacularSource;

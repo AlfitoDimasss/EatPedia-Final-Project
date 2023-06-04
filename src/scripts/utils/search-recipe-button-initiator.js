@@ -1,15 +1,14 @@
 import SpoonacularSource from '../data/spoonacular-source';
-import { createRecipeItemTemplate } from '../views/templates/template-creator';
+import DisplayRecipesPagination from './display-recipes-pagination-initiator';
 
 const SearchRecipeButtonInitiator = {
-  init({ button, input, container }) {
+  init({ button, input }) {
     button.addEventListener('click', async (e) => {
       e.preventDefault();
       if (input.value !== '') {
         const results = await SpoonacularSource.searchRecipe(input.value);
-        container.innerHTML = '';
-        results.forEach((result) => {
-          container.innerHTML += createRecipeItemTemplate(result);
+        DisplayRecipesPagination.init({
+          recipes: results,
         });
       }
     });

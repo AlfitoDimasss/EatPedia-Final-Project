@@ -1,9 +1,9 @@
 import FilterCard from './components/filter-card';
-import { createRecipeItemTemplate } from '../templates/template-creator';
 import dummyData from '../../data/dummy-data.json';
 import SearchRecipeButtonInitiator from '../../utils/search-recipe-button-initiator';
 import FilterCardInitiator from '../../utils/filter-card-initiator';
 import SearchFilterButtonInitiator from '../../utils/search-filter-button-initiator';
+import DisplayRecipesPagination from '../../utils/display-recipes-pagination-initiator';
 
 const Recipes = {
   async render() {
@@ -24,12 +24,17 @@ const Recipes = {
         <h1 class="recipes__title">Resep Masakan Terbaru</h1>
         <div class="recipes__wrapper">
           ${FilterCard()}
-          <div class="recipes__recipe-container" id="recipeContainer"></div>
+          <div>
+            <div class="recipes__recipe-container" id="recipeContainer"></div>
+            <nav class="pagination-container">
+              <div id="pagination-numbers">
+              </div>
+            </nav>
+          </div>
         </div>
       </section>
     `;
 
-    const recipeContainer = document.getElementById('recipeContainer');
     const searchButton = document.getElementById('searchButton');
     const keywordInput = document.getElementById('recipesSearch');
     const filterCard = document.getElementById('filterCard');
@@ -39,18 +44,6 @@ const Recipes = {
     const filterButtonDesktop = document.getElementById('filterButtonDesktop');
 
     const recipes = dummyData;
-    recipes.forEach((recipe) => {
-      recipeContainer.innerHTML += createRecipeItemTemplate(recipe);
-    });
-    recipes.forEach((recipe) => {
-      recipeContainer.innerHTML += createRecipeItemTemplate(recipe);
-    });
-
-    SearchRecipeButtonInitiator.init({
-      button: searchButton,
-      input: keywordInput,
-      container: recipeContainer,
-    });
 
     FilterCardInitiator.init({
       toggle: toggleFilterCard,
@@ -58,11 +51,19 @@ const Recipes = {
       closeBtn: closeButtonFilterCard,
     });
 
+    SearchRecipeButtonInitiator.init({
+      button: searchButton,
+      input: keywordInput,
+    });
+
     SearchFilterButtonInitiator.init({
       btnMobile: filterButtonMobile,
       btnDesktop: filterButtonDesktop,
-      container: recipeContainer,
       card: filterCard,
+    });
+
+    DisplayRecipesPagination.init({
+      recipes,
     });
   },
 };

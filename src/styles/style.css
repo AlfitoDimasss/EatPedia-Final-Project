@@ -687,3 +687,33 @@ footer p {
 /*
   Footer
 */
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.pagination-number {
+  font-size: 1.1rem;
+  border: none;
+  margin: 0.25rem 0.25rem;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: .2rem;
+  background-color: var(--primary);
+  color: white;
+}
+
+.pagination-number:hover {
+  color: var(--primary);
+  background-color: white;
+  border: 1px solid var(--primary);
+}
+
+.pagination-number.active {
+  color: #fff;
+  background: #0085b6;
+}

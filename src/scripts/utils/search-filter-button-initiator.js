@@ -1,5 +1,6 @@
-import { createRecipeItemTemplate } from '../views/templates/template-creator';
+import SpoonacularSource from '../data/spoonacular-source';
 import API_ENDPOINT from '../globals/api-endpoint';
+import DisplayRecipesPagination from './display-recipes-pagination-initiator';
 
 let query = API_ENDPOINT.BASE_SEARCH;
 
@@ -76,39 +77,33 @@ const getAllergy = () => {
 };
 
 const SearchFilterButtonInitiator = {
-  init({ btnMobile, btnDesktop, container, card }) {
+  init({ btnMobile, btnDesktop, card }) {
     btnMobile.addEventListener('click', async (e) => {
       e.preventDefault();
       query = API_ENDPOINT.BASE_SEARCH;
-      container.innerHTML = '';
       getKeyword();
       getFoodType();
       getNutrition();
       getDiet();
       getAllergy();
-      const resp = await fetch(query);
-      const resultsJson = await resp.json();
-      const { results } = resultsJson;
+      const results = await SpoonacularSource.searchRecipeByQueryLink(query);
       card.style.display = 'none';
-      results.forEach((result) => {
-        container.innerHTML += createRecipeItemTemplate(result);
+      DisplayRecipesPagination.init({
+        recipes: results,
       });
     });
 
     btnDesktop.addEventListener('click', async (e) => {
       e.preventDefault();
       query = API_ENDPOINT.BASE_SEARCH;
-      container.innerHTML = '';
       getKeyword();
       getFoodType();
       getNutrition();
       getDiet();
       getAllergy();
-      const resp = await fetch(query);
-      const resultsJson = await resp.json();
-      const { results } = resultsJson;
-      results.forEach((result) => {
-        container.innerHTML += createRecipeItemTemplate(result);
+      const results = await SpoonacularSource.searchRecipeByQueryLink(query);
+      DisplayRecipesPagination.init({
+        recipes: results,
       });
     });
   },

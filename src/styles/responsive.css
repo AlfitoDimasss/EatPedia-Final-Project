@@ -120,8 +120,8 @@
   }
 
   .latest-recipe__recipe-container {
-    max-width: 75%;
-    grid-template-columns: repeat(3, 1fr);
+    max-width: 50%;
+    grid-template-columns: repeat(2, 1fr);
     margin: 0 auto 40px;
   }
 
@@ -281,16 +281,23 @@
   .latest-recipe h1 {
     font-size: 2em;
     text-align: left;
+    max-width: 75%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .latest-recipe p {
     font-size: 1em;
     text-align: left;
+    max-width: 75%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .latest-recipe__recipe-container {
-    grid-template-columns: repeat(6, 1fr);
-    max-width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 75%;
+    margin: 0 auto 40px;
   }
 
   .recipe-item .recipe-item__content h3 {
