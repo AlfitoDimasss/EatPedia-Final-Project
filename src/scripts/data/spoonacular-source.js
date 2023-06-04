@@ -6,6 +6,18 @@ class SpoonacularSource {
     const responseJson = await response.json();
     return responseJson.results;
   }
+
+  static async searchRecipe(val) {
+    const response = await fetch(`${API_ENDPOINT.BASE_SEARCH}&query=${val}`);
+    const responseJson = await response.json();
+    return responseJson.results;
+  }
+
+  static async searchRecipeByQueryLink(query) {
+    const response = await fetch(query);
+    const responseJson = await response.json();
+    return responseJson.results;
+  }
 }
 
 export default SpoonacularSource;

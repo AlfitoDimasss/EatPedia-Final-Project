@@ -495,7 +495,60 @@ About
   right: 8px;
 }
 
-.recipes__filter-wrapper {
+/*
+  Recipe List
+*/
+
+.recipes__search-bar {
+  text-align: center;
+}
+
+.recipes__search-bar a {
+  padding: 18px 0px;
+}
+
+.recipes__search-bar i {
+  background-color: var(--primary);
+  padding: 6.8px 20px 11px;
+  border-radius: 0px 20px 20px 0px;
+  margin: -6px;
+}
+
+.recipes__search-bar input {
+  padding: 8px 20px;
+  border-radius: 20px 0px 0px 20px;
+  border-color: var(--primary);
+  font-size: 0.7em;
+  margin-bottom: 10px;
+}
+
+.recipes__filter-toggle {
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: -8px;
+  margin-bottom: 12px;
+}
+
+.recipes__filter-toggle span {
+  color: var(--orange);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.recipes__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3em;
+  margin-bottom: 18px;
+}
+
+.recipes__recipe-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.recipes__filter-card-wrapper {
   display: none;
   position: fixed;
   z-index: 1;
@@ -508,16 +561,29 @@ About
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.recipes__filter {
+.recipes__filter-card {
   background-color: var(--orange);
   padding: 16px 32px;
   border-radius: 20px;
   width: 75%;
   margin: 0 auto;
-  min-height: 120%;
 }
 
-.recipes__filter h5 {
+.recipes__filter-card__close {
+  color: var(--white);
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.recipes__filter-card__close:hover,
+.recipes__filter-card__close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.recipes__filter-card h5 {
   color: var(--white);
   text-align: center;
   font-size: 1.2em;
@@ -525,27 +591,27 @@ About
   margin-bottom: 16px;
 }
 
-.recipes__filter label {
+.recipes__filter-card label {
   color: white;
   font-weight: 600;
   display: block;
   margin-bottom: 8px;
 }
 
-.recipes__filter .label-inner {
+.recipes__filter-card .label-inner {
   font-weight: 500;
   display: block;
   margin-bottom: 8px;
   font-size: 0.9em;
 }
 
-.recipes__filter .label-inner-checkbox {
+.recipes__filter-card .label-inner-checkbox {
   font-weight: 500;
   display: inline;
   font-size: 0.8em;
 }
 
-.recipes__filter__food-type {
+.recipes__filter-card select {
   border: none;
   background-color: var(--white);
   width: 100%;
@@ -553,18 +619,18 @@ About
   padding: 4px;
 }
 
-.hr-form {
+.recipes__filter-card hr {
   margin: 12px 0px;
   border: 1px solid var(--white);
 }
 
-.recipes__filter__calori-wrapper {
+.recipes__filter-card__nutrition-wrapper {
   display: flex;
   gap: 10%;
   margin-bottom: 8px;
 }
 
-.recipes__filter__calori {
+.recipes__filter-card__nutrition-wrapper input {
   width: 50%;
   border: none;
   background-color: var(--white);
@@ -572,10 +638,34 @@ About
   border-radius: 10px;
 }
 
-.article-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+.recipes__filter-card__diet {
+  margin-bottom: 15px;
+}
+
+.recipes__filter-card__allergy {
+  margin-bottom: 10px;
+}
+
+.recipes__filter-button-wrapper {
+  text-align: center;
+}
+
+.recipes__filter-button-wrapper button {
+  border: none;
+  background-color: #1B191A;
+  color: #fff;
+  padding: 8px;
+  border-radius: 20px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.recipes__filter-button__mobile {
+  display: block;
+}
+
+.recipes__filter-button__desktop {
+  display: none;
 }
 
 /*
@@ -618,6 +708,7 @@ About
   Article
 */
 
+
 /*
   Footer
 */
@@ -638,12 +729,32 @@ footer p {
   Footer
 */
 
-.filter-button {
-  text-align: center;
-  font-size: 0.8em;
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
 }
 
-.filter-button span {
-  color: var(--orange);
-  font-weight: 600;
+.pagination-number {
+  font-size: 1.1rem;
+  border: none;
+  margin: 0.25rem 0.25rem;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: .2rem;
+  background-color: var(--primary);
+  color: white;
+}
+
+.pagination-number:hover {
+  color: var(--primary);
+  background-color: white;
+  border: 1px solid var(--primary);
+}
+
+.pagination-number.active {
+  color: #fff;
+  background: #0085b6;
 }

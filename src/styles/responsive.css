@@ -120,8 +120,8 @@
   }
 
   .latest-recipe__recipe-container {
-    max-width: 75%;
-    grid-template-columns: repeat(3, 1fr);
+    max-width: 50%;
+    grid-template-columns: repeat(2, 1fr);
     margin: 0 auto 40px;
   }
 
@@ -157,26 +157,23 @@
     right: 8px;
   }
 
-  .filter-button {
-    display: none;
+  .recipes__title {
+    font-size: 1.6em;
   }
 
-  .recipes-wrapper {
-    display: flex;
+  .recipes__search-bar input {
+    width: 40%;
   }
 
-  .recipes__filter-wrapper {
-    display: block;
-    position: static;
-    padding: 0px;
-    width: 30%;
-    background-color: transparent;
+  .recipes__recipe-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 
-  .recipes__filter {
-    width: 100%;
+  .recipes__filter-card {
+    width: 50%;
   }
-
 
   footer p {
     font-size: 1em;
@@ -284,16 +281,23 @@
   .latest-recipe h1 {
     font-size: 2em;
     text-align: left;
+    max-width: 75%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .latest-recipe p {
     font-size: 1em;
     text-align: left;
+    max-width: 75%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .latest-recipe__recipe-container {
-    grid-template-columns: repeat(6, 1fr);
-    max-width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 75%;
+    margin: 0 auto 40px;
   }
 
   .recipe-item .recipe-item__content h3 {
@@ -324,11 +328,43 @@
     left: 15px;
   }
 
-  .recipes__filter-wrapper {
+  .recipes__wrapper {
+    display: flex;
+    gap: 48px;
+  }
+
+  .recipes__filter-card-wrapper {
     display: block;
-    position: static;
     padding: 0px;
-    width: 25%;
+    position: static;
+    max-width: 300px;
+    background-color: transparent;
+  }
+
+  .recipes__filter-card {
+    width: 100%;
+  }
+
+
+  .recipes__filter-toggle {
+    display: none;
+  }
+
+  .recipes__recipe-container {
+    grid-template-columns: repeat(4, 1fr);
+    align-self: flex-start;
+  }
+
+  .recipes__filter-card__close {
+    display: none;
+  }
+
+  .recipes__filter-button__mobile {
+    display: none;
+  }
+
+  .recipes__filter-button__desktop {
+    display: block;
   }
 
   footer p {
