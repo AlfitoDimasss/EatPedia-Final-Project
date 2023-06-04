@@ -29,8 +29,14 @@ const createRecipeItemTemplate = (recipe) => `
 
 const createArticleItemTemplate = (article) => `
   <div class="article-item">
-    <p>${article.title}</p>
-    <p>${article.description}</p>
+    <div class="article-item__header">
+      <img class="article-item__header__poster" 
+        src="${article.image}"
+    </div>
+    <div class="article-item__content">
+      <h2>${article.title}</h2>
+      <p>${article.description}</p>
+    </div>
   </div>
 `;
 
