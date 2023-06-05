@@ -1,12 +1,23 @@
+import dummyDetail from '../../data/dummy-detail-recipe.json';
+import { createRecipeDetailTemplate } from '../templates/template-creator';
+
 const RecipesDetails = {
   async render() {
     return `
-      <h2>Recipes Details Page</h2>
+      <div class="content" id="content"></div>
     `;
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const content = document.querySelector('.content');
+    content.innerHTML += `
+      <section class="section">
+        <div class="detail__detail-container" id="detailContainer"></div>
+      </section>
+    `;
+    const detailData = dummyDetail;
+    const detailContainer = document.getElementById('detailContainer');
+    detailContainer.innerHTML += createRecipeDetailTemplate(detailData);
   },
 };
 

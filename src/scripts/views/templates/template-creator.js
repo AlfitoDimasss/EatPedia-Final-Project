@@ -5,7 +5,7 @@ const createRecipeItemTemplate = (recipe) => `
         src="${recipe.image || 'https://picsum.photos/id/666/800/450?grayscale'}">
   </div>
   <div class="recipe-item__content">
-    <h3><a href="#">${recipe.title}</a></h3>
+    <h3><a href="/#/detail/${recipe.id}">${recipe.title}</a></h3>
     <div class="recipe-item__content__icons">
       <div class="recipe-item__content__icons__icon">
         <i class="fa-solid fa-heart-pulse" style="color: #50bb2b;"></i>
@@ -40,4 +40,8 @@ const createArticleItemTemplate = (article) => `
   </div>
 `;
 
-export { createRecipeItemTemplate, createArticleItemTemplate };
+const createRecipeDetailTemplate = (recipe) => `
+  <h1>${recipe.title}</h1>
+`;
+
+export { createRecipeItemTemplate, createArticleItemTemplate, createRecipeDetailTemplate };
