@@ -40,8 +40,12 @@ const createArticleItemTemplate = (article) => `
   </div>
 `;
 
-const createRecipeDetailTemplate = (recipe) => `
+const createRecipeDetailTemplate = (recipe, equipments, instructions) => `
   <h1>${recipe.title}</h1>
+  <img src="${recipe.image}">
+  <h1>${recipe.ingredients[0].name}</h1>
+  <h2>${equipments.equipment[0].name}</h2>
+  <h2>${instructions[0].steps[0].step}</h2>
 `;
 
 export { createRecipeItemTemplate, createArticleItemTemplate, createRecipeDetailTemplate };

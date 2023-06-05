@@ -1,4 +1,6 @@
 import dummyDetail from '../../data/dummy-detail-recipe.json';
+import dummyEquipments from '../../data/dummy-equipment.json';
+import dummyInstructions from '../../data/dummy-instruction.json';
 import { createRecipeDetailTemplate } from '../templates/template-creator';
 
 const RecipesDetails = {
@@ -17,7 +19,7 @@ const RecipesDetails = {
     `;
     const detailData = dummyDetail;
     const detailContainer = document.getElementById('detailContainer');
-    detailContainer.innerHTML += createRecipeDetailTemplate(detailData);
+    detailContainer.innerHTML += createRecipeDetailTemplate(detailData, dummyEquipments, dummyInstructions);
   },
 };
 

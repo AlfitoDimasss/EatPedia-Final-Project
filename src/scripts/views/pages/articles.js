@@ -1,6 +1,5 @@
 import EatpediaAPISource from '../../data/eatpedia-article-source';
 import { createArticleItemTemplate } from '../templates/template-creator';
-import dummyArticle from '../../data/dummy-article-data.json';
 
 const Articles = {
   async render() {
