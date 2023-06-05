@@ -34,7 +34,7 @@ const createArticleItemTemplate = (article) => `
         src="${article.image}"
     </div>
     <div class="article-item__content">
-      <h3><a href="#">${article.title}</a></h3>
+      <h3><a href="${article.link}" target="_blank">${article.title}</a></h3>
       <p>${article.description}</p>
     </div>
   </div>
