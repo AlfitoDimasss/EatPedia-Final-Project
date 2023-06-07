@@ -65,7 +65,7 @@
       }
     ]
   },
-  "ingredients": [
+  "extendedIngredients": [
     {
       "id": 1001,
       "name": "butter",
