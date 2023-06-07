@@ -21,8 +21,8 @@ const Recipes = {
           <input type="text" Placeholder="e.g pasta, pancake" id="recipesSearch">
           <a href="javascript:void(0)" id="searchButton"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
         </div>
-        <p class="recipes__filter-toggle">Pencarian menggunakan <span id="filterToggle">Filter</span></p>
-        <h1 class="recipes__title">Resep Masakan Terbaru</h1>
+        <p class="recipes__filter-toggle">Search using <span id="filterToggle">Filter</span></p>
+        <h1 class="recipes__title">Latest Recipes</h1>
         <div class="recipes__wrapper">
           ${FilterCard()}
           <div>
