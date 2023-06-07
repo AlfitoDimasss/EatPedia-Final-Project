@@ -1,3 +1,5 @@
+import { makeIngredients, makeInstruction, makeNutritions, makeLabel, makeEquipments } from '../../utils/detail-recipe-utilities';
+
 const createRecipeItemTemplate = (recipe) => `
 <div class="recipe-item">
   <div class="recipe-item__header">
@@ -9,7 +11,7 @@ const createRecipeItemTemplate = (recipe) => `
     <div class="recipe-item__content__icons">
       <div class="recipe-item__content__icons__icon">
         <i class="fa-solid fa-heart-pulse" style="color: #50bb2b;"></i>
-        <span>${recipe.healthScore}</span>
+        <span>${recipe.healthScore || 'N/A'}</span>
         <p>Healthy</p>
       </div>
       <div class="recipe-item__content__icons__icon">
@@ -40,12 +42,76 @@ const createArticleItemTemplate = (article) => `
   </div>
 `;
 
+const makeRecipeItem = (recipes) => {
+  let item = '';
+  recipes.forEach((r) => {
+    item += createRecipeItemTemplate(r);
+  });
+  return item;
+};
+
 const createRecipeDetailTemplate = (recipe, equipments, instructions) => `
-  <h1>${recipe.title}</h1>
-  <img src="${recipe.image}">
-  <h1>${recipe.ingredients[0].name}</h1>
-  <h2>${equipments.equipment[0].name}</h2>
-  <h2>${instructions[0].steps[0].step}</h2>
+  <div class="recipe-detail">
+    <h1 class="recipe-detail__title">${recipe.title}</h1>
+    <div class="recipe-detail__left-side">
+      <img src="${recipe.image}" alt="${recipe.title}" class="recipe-detail__image">
+      <div class="recipe-detail__information">
+        <div class="recipe-detail__information__item">
+          <p class="recipe-detail__information__item__head">Time:</p>
+          <p class="recipe-detail__information__item__body">${recipe.readyInMinutes} Min</p>
+        </div>
+        <div class="recipe-detail__information__item">
+          <p class="recipe-detail__information__item__head">Serving:</p>
+          <p class="recipe-detail__information__item__body">${recipe.servings} Portion</p>
+        </div>
+        <div class="recipe-detail__information__item">
+          <p class="recipe-detail__information__item__head">Health Score:</p>
+          <p class="recipe-detail__information__item__body">${recipe.healthScore} %</p>
+        </div>
+        <div class="recipe-detail__information__item">
+          <p class="recipe-detail__information__item__head">Weight Point:</p>
+          <p class="recipe-detail__information__item__body">${recipe.weightWatcherSmartPoints} Pts</p>
+        </div>
+      </div>
+      <div class="recipe-detail__ingredients">
+        <h5>Ingredients<h5>
+        <hr>
+        <ul>
+          ${makeIngredients(recipe.extendedIngredients)}
+        </ul>
+      </div>
+      <div class="recipe-detail__equipments">
+        <h5>Equipment</h5>
+        <ul>
+          ${makeEquipments(equipments.equipment)}
+        </ul>
+      </div>
+      <div class="recipe-detail__ingredients">
+        <h5>Instruction<h5>
+        <hr>
+        <ul>
+          ${makeInstruction(instructions)}
+        </ul>
+      </div>
+      <div class="recipe-detail__summary">
+        <h5>Summary<h5>
+        <hr>
+        <p>${recipe.summary}</p>
+      </div>
+    </div>
+    <div class="recipe-detail__right-side">
+      <div class="recipe-detail__nutritions">
+        <h5>Nutrition Facts<h5>
+        <div class="recipe-detail__nutrition">
+          ${makeNutritions(recipe.nutrition)}
+        </div>
+      </div>
+      <div class="recipe-detail__label">
+        ${makeLabel()}
+      </div>
+    </div>
+    
+  </div>
 `;
 
 export { createRecipeItemTemplate, createArticleItemTemplate, createRecipeDetailTemplate };

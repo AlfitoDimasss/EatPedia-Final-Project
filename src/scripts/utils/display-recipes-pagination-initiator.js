@@ -39,7 +39,6 @@ const DisplayRecipesPagination = {
     setCurrentPage(1);
 
     const paginationNumber = document.querySelectorAll('.pagination-number');
-    console.log(paginationNumber.length);
     paginationNumber.forEach((button) => {
       const pageIndex = Number(button.getAttribute('page-index'));
       if (pageIndex) {

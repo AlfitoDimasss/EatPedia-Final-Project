@@ -4,6 +4,7 @@ import SearchRecipeButtonInitiator from '../../utils/search-recipe-button-initia
 import FilterCardInitiator from '../../utils/filter-card-initiator';
 import SearchFilterButtonInitiator from '../../utils/search-filter-button-initiator';
 import DisplayRecipesPagination from '../../utils/display-recipes-pagination-initiator';
+import SpoonacularSource from '../../data/spoonacular-source';
 
 const Recipes = {
   async render() {
@@ -43,6 +44,7 @@ const Recipes = {
     const filterButtonMobile = document.getElementById('filterButtonMobile');
     const filterButtonDesktop = document.getElementById('filterButtonDesktop');
 
+    // const recipes = await SpoonacularSource.getBaseRecipe();
     const recipes = dummyData;
 
     FilterCardInitiator.init({

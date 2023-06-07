@@ -1,6 +1,7 @@
 import dummyDetail from '../../data/dummy-detail-recipe.json';
 import dummyEquipments from '../../data/dummy-equipment.json';
 import dummyInstructions from '../../data/dummy-instruction.json';
+import UrlParser from '../../routes/url-parser';
 import { createRecipeDetailTemplate } from '../templates/template-creator';
 
 const RecipesDetails = {
@@ -11,6 +12,8 @@ const RecipesDetails = {
   },
 
   async afterRender() {
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    // const { detailResponseJson, detailInstructionJson, detailEquipmentJson } = await SpoonacularSource.getDetailRecipe(url.id);
     const content = document.querySelector('.content');
     content.innerHTML += `
       <section class="section">
@@ -19,6 +22,7 @@ const RecipesDetails = {
     `;
     const detailData = dummyDetail;
     const detailContainer = document.getElementById('detailContainer');
+    // detailContainer.innerHTML += createRecipeDetailTemplate(detailResponseJson, detailEquipmentJson, detailInstructionJson);
     detailContainer.innerHTML += createRecipeDetailTemplate(detailData, dummyEquipments, dummyInstructions);
   },
 };

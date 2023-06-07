@@ -181,6 +181,25 @@
     gap: 16px;
   }
 
+  .recipe-detail {
+    flex-direction: row;
+    gap: 1em;
+    justify-content: space-between;
+  }
+
+  .recipe-detail__title {
+    width: 100%;
+  }
+
+  .recipe-detail__left-side {
+    width: 55%;
+  }
+
+  .recipe-detail__right-side {
+    width: 40%;
+
+  }
+
   footer p {
     font-size: 1em;
   }
@@ -377,6 +396,24 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 16px;
+  }
+
+  .recipe-detail {
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .recipe-detail__title {
+    width: 100%;
+  }
+
+  .recipe-detail__left-side {
+    width: 64%;
+  }
+
+  .recipe-detail__right-side {
+    width: 30%;
   }
 
   footer p {
