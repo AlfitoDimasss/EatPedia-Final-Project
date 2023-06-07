@@ -1,5 +1,17 @@
 import { makeIngredients, makeInstruction, makeNutritions, makeLabel, makeEquipments } from '../../utils/detail-recipe-utilities';
 
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this recipe" id="likeButton" class="like">
+  <i class="fa-regular fa-star" aria-hidden="true"></i>
+  </button>
+  `;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this recipe" id="likeButton" class="like">
+  <i class="fa-solid fa-star" aria-hidden="true"></i>
+  </button>
+`;
+
 const createRecipeItemTemplate = (recipe) => `
 <div class="recipe-item">
   <div class="recipe-item__header">
@@ -42,14 +54,6 @@ const createArticleItemTemplate = (article) => `
   </div>
 `;
 
-const makeRecipeItem = (recipes) => {
-  let item = '';
-  recipes.forEach((r) => {
-    item += createRecipeItemTemplate(r);
-  });
-  return item;
-};
-
 const createRecipeDetailTemplate = (recipe, equipments, instructions) => `
   <div class="recipe-detail">
     <h1 class="recipe-detail__title">${recipe.title}</h1>
@@ -81,7 +85,8 @@ const createRecipeDetailTemplate = (recipe, equipments, instructions) => `
         </ul>
       </div>
       <div class="recipe-detail__equipments">
-        <h5>Equipment</h5>
+        <h5>Equipments</h5>
+        <hr>
         <ul>
           ${makeEquipments(equipments.equipment)}
         </ul>
@@ -114,4 +119,4 @@ const createRecipeDetailTemplate = (recipe, equipments, instructions) => `
   </div>
 `;
 
-export { createRecipeItemTemplate, createArticleItemTemplate, createRecipeDetailTemplate };
+export { createRecipeItemTemplate, createArticleItemTemplate, createRecipeDetailTemplate, createLikeButtonTemplate, createLikedButtonTemplate };
