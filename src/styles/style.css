@@ -866,19 +866,17 @@ footer p {
   margin-bottom: 0.4em;
 }
 
-.recipe-detail__equipments ul {
-  list-style-type: none;
+.recipe-detail__equipments hr {
+  border: 1px solid black;
+  margin-bottom: 0.4em;
 }
 
 .recipe-detail__equipments ul li {
-  background-color: white;
-  color: var(--primary);
-  padding: 0.4em;
+  margin-left: 1.8em;
   font-size: 0.9em;
-  border-radius: 0.8em;
   margin-bottom: 0.4em;
-  padding-left: 1em;
   text-transform: capitalize;
+
 }
 
 .recipe-detail__nutritions {
@@ -974,4 +972,23 @@ footer p {
 .recipe-detail__simmiliar-recipes__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange);
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
 }
