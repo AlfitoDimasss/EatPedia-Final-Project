@@ -200,6 +200,12 @@
 
   }
 
+  .favorite-recipes__recipe-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
   footer p {
     font-size: 1em;
   }
@@ -414,6 +420,12 @@
 
   .recipe-detail__right-side {
     width: 30%;
+  }
+
+  .favorite-recipes__recipe-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
   }
 
   footer p {

@@ -29,7 +29,6 @@ class SpoonacularSource {
     console.log('fetch detail');
     const detailResponse = await fetch(`${API_ENDPOINT.DETAIL_INFORMATION(id)}`);
     const detailResponseJson = await detailResponse.json();
-    console.log(detailResponseJson);
     console.log('fetch instruction');
     const detailInstruction = await fetch(`${API_ENDPOINT.DETAIL_INSTRUCTION(id)}`);
     const detailInstructionJson = await detailInstruction.json();

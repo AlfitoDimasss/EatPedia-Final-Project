@@ -29,9 +29,11 @@ const makeNutritions = (nutrition) => {
 
 const makeEquipments = (equipments) => {
   let list = '';
-  equipments.forEach((e) => {
-    list += `<li>${e.name}</li>`;
-  });
+  if (equipments.length !== 0) {
+    equipments.forEach((e) => {
+      list += `<li>${e.name}</li>`;
+    });
+  }
   return list;
 };
 

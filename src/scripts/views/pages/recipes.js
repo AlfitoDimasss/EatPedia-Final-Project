@@ -44,8 +44,8 @@ const Recipes = {
     const filterButtonMobile = document.getElementById('filterButtonMobile');
     const filterButtonDesktop = document.getElementById('filterButtonDesktop');
 
-    // const recipes = await SpoonacularSource.getBaseRecipe();
-    const recipes = dummyData;
+    const recipes = await SpoonacularSource.getBaseRecipe();
+    // const recipes = dummyData;
 
     FilterCardInitiator.init({
       toggle: toggleFilterCard,

@@ -13,16 +13,16 @@ const Favorites = {
     content.innerHTML += `
     <section class="section">
       <h1 class="recipes__title">Favorite Recipes</h1>
-      <div class="recipes__recipe-container" id="recipeContainer"></div>
+      <div class="favorite-recipes__recipe-container" id="favoriteRecipeContainer"></div>
     </section>
     `;
 
-    const recipeContainer = document.getElementById('recipeContainer');
+    const favoriteRecipeContainer = document.getElementById('favoriteRecipeContainer');
 
     const recipes = await FavoriteRecipeIdb.getAllRecipes();
 
     recipes.forEach((recipe) => {
-      recipeContainer.innerHTML += createRecipeItemTemplate(recipe);
+      favoriteRecipeContainer.innerHTML += createRecipeItemTemplate(recipe);
     });
   },
 };
