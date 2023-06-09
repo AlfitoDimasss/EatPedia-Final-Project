@@ -7,7 +7,7 @@ const Jumbotron = () => `
       <div class="jumbotron__desc-container">
         <h1>Welcome to EatPedia</h1>
         <p>Find different types of food recipes that you might like and start cooking.</p>
-        <a href="#/recipes">see more</a>
+        <a href="#/recipes">Start Now</a>
       </div>
     </div>
   </section>

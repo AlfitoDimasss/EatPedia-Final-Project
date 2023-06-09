@@ -1,28 +1,28 @@
 const Feature = () => `
 <section class="section">
     <div class="feature">
-        <h1>Our Feature</h1>
-        <p>Below are the available features on our website</p>
-        <div class="feature_container">
-            <div class="feature_container_card">
-                <i class="fa-regular fa-bookmark"></i>    
-                <h3>Bookmark</h3>
-                <p>You can save the recipe you want with this feature</p>
-            </div>
-            <div class="feature_container_card">
+        <h1>Our Features</h1>
+        <p class="feature__description">Below are the available features on our website</p>
+        <div class="feature__container">
+            <div class="feature__container__card">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <h3>Search</h3>
-                <p>You can search for the recipe you want with this feature</p>
+                <p>Search for the recipes you want to cook</p>
             </div>
-            <div class="feature_container_card">
-                <i class="fa-regular fa-newspaper"></i>
-                <h3>Article</h3>
-                <p>You can read articles about food</p>
-            </div>
-            <div class="feature_container_card">
+            <div class="feature__container__card">
                 <i class="fa-solid fa-filter"></i>
                 <h3>Filter</h3>
-                <p>You can search for recipes according to the category you want</p>
+                <p>Filter recipes based on your preference</p>
+            </div>
+            <div class="feature__container__card">
+                <i class="fa-regular fa-bookmark"></i>    
+                <h3>Bookmark</h3>
+                <p>Save the recipe you like</p>
+            </div>
+            <div class="feature__container__card">
+                <i class="fa-regular fa-newspaper"></i>
+                <h3>Article</h3>
+                <p>Shortcut to interesting articles</p>
             </div>
         </div>
     </div>

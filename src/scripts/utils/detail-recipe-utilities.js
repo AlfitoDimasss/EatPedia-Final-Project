@@ -1,29 +1,46 @@
 const makeIngredients = (ingredients) => {
   let list = '';
-  ingredients.forEach((i) => {
-    list += `<li>${i.amount} ${i.unit} ${i.name}</li>`;
-  });
+  if (ingredients.length !== 0) {
+    ingredients.forEach((i) => {
+      list += `<li>${i.amount} ${i.unit} ${i.name}</li>`;
+    });
+  } else {
+    list += '<li>No Data</li>';
+  }
   return list;
 };
 
 const makeInstruction = (instructions) => {
   let list = '';
-  instructions[0].steps.forEach((s) => {
-    list += `<li>${s.step}</li>`;
-  });
+  if (instructions.length !== 0) {
+    instructions[0].steps.forEach((s) => {
+      list += `<li>${s.step}</li>`;
+    });
+  } else {
+    list += '<li>No Data</li>';
+  }
   return list;
 };
 
 const makeNutritions = (nutrition) => {
   let item = '';
-  nutrition.nutrients.forEach((n) => {
+  if (nutrition.length !== 0) {
+    nutrition.nutrients.forEach((n) => {
+      item += `
+      <div class="recipe-detail__nutrition__item">
+        <p class="recipe-detail__nutrition__item__head">${Math.floor(n.amount)}${n.unit}</p>
+        <p class="recipe-detail__nutrition__item__body">${n.name}</p>
+      </div>
+      `;
+    });
+  } else {
     item += `
     <div class="recipe-detail__nutrition__item">
-      <p class="recipe-detail__nutrition__item__head">${Math.floor(n.amount)}${n.unit}</p>
-      <p class="recipe-detail__nutrition__item__body">${n.name}</p>
+      <p class="recipe-detail__nutrition__item__head">N/A</p>
+      <p class="recipe-detail__nutrition__item__body">No Data</p>
     </div>
     `;
-  });
+  }
   return item;
 };
 
@@ -33,6 +50,8 @@ const makeEquipments = (equipments) => {
     equipments.forEach((e) => {
       list += `<li>${e.name}</li>`;
     });
+  } else {
+    list += '<li>No Data</li>';
   }
   return list;
 };

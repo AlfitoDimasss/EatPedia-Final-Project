@@ -1,11 +1,11 @@
 import SpoonacularSource from '../../data/spoonacular-source';
-import { createRecipeItemTemplate } from '../templates/template-creator';
-import dummyData from '../../data/dummy-data.json';
 import Jumbotron from './components/jumbotron';
 import About from './components/about';
 import Feature from './components/feature';
 import LatestRecipe from './components/latest-recipe';
 import Team from './components/team';
+import dummyRecipeDisplay from '../../data/dummy-recipe-display.json';
+import { createRecipeItemTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -25,7 +25,7 @@ const Home = {
     `;
     const recipeContainer = document.getElementById('recipeContainer');
     // const recipes = await SpoonacularSource.latestRecipe();
-    const recipes = dummyData;
+    const recipes = dummyRecipeDisplay;
     recipes.forEach((recipe) => {
       recipeContainer.innerHTML += createRecipeItemTemplate(recipe);
     });

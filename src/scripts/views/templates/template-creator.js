@@ -54,7 +54,7 @@ const createArticleItemTemplate = (article) => `
   </div>
 `;
 
-const createRecipeDetailTemplate = (recipe, equipments, instructions) => `
+const createRecipeDetailTemplate = (recipe, equipments, instructions, detailLabel) => `
   <div class="recipe-detail">
     <h1 class="recipe-detail__title">${recipe.title}</h1>
     <div class="recipe-detail__left-side">
@@ -112,7 +112,7 @@ const createRecipeDetailTemplate = (recipe, equipments, instructions) => `
         </div>
       </div>
       <div class="recipe-detail__label">
-        ${makeLabel()}
+        ${detailLabel}
       </div>
     </div>
     

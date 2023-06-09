@@ -7,6 +7,8 @@ const SearchRecipeButtonInitiator = {
       e.preventDefault();
       if (input.value !== '') {
         const results = await SpoonacularSource.searchRecipe(input.value);
+        const title = document.querySelector('.recipes__title');
+        title.innerText = `${results.length} Recipes Found`;
         DisplayRecipesPagination.init({
           recipes: results,
         });

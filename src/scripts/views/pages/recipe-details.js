@@ -1,6 +1,3 @@
-import dummyDetail from '../../data/dummy-detail-recipe.json';
-import dummyEquipments from '../../data/dummy-equipment.json';
-import dummyInstructions from '../../data/dummy-instruction.json';
 import UrlParser from '../../routes/url-parser';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import SpoonacularSource from '../../data/spoonacular-source';
@@ -16,7 +13,7 @@ const RecipesDetails = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const { detailResponseJson, detailInstructionJson, detailEquipmentJson } = await SpoonacularSource.getDetailRecipe(url.id);
+    const { detailResponseJson, detailInstructionJson, detailEquipmentJson, detailLabelHtml } = await SpoonacularSource.getDetailRecipe(url.id);
 
     const content = document.querySelector('.content');
     content.innerHTML += `
@@ -26,7 +23,7 @@ const RecipesDetails = {
     `;
 
     const detailContainer = document.getElementById('detailContainer');
-    detailContainer.innerHTML += createRecipeDetailTemplate(detailResponseJson, detailEquipmentJson, detailInstructionJson);
+    detailContainer.innerHTML += createRecipeDetailTemplate(detailResponseJson, detailEquipmentJson, detailInstructionJson, detailLabelHtml);
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
