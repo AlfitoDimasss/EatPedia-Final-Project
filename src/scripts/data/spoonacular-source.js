@@ -35,7 +35,10 @@ class SpoonacularSource {
     console.log('fetch equipment');
     const detailEquipment = await fetch(`${API_ENDPOINT.DETAIL_EQUIPMENT(id)}`);
     const detailEquipmentJson = await detailEquipment.json();
-    return { detailResponseJson, detailInstructionJson, detailEquipmentJson };
+    console.log('fetch label');
+    const detailLabel = await fetch(`${API_ENDPOINT.NUTRITION_LABEL(id)}`);
+    const detailLabelHtml = await detailLabel.text();
+    return { detailResponseJson, detailInstructionJson, detailEquipmentJson, detailLabelHtml };
   }
 }
 

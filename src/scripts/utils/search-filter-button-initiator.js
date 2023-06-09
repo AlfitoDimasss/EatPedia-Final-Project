@@ -51,28 +51,62 @@ const getNutrition = () => {
 };
 
 const getDiet = () => {
-  const diet1 = document.getElementById('diet1').checked;
-  const diet2 = document.getElementById('diet2').checked;
-  const diet3 = document.getElementById('diet3').checked;
+  const diet1 = document.getElementById('diet1');
+  const diet2 = document.getElementById('diet2');
+  const diet3 = document.getElementById('diet3');
+  const values = [];
 
-  if (diet1 || diet2 || diet3) {
+  if (diet1.checked) {
+    values.push(diet1.value);
+  }
+
+  if (diet2.checked) {
+    values.push(diet2.value);
+  }
+
+  if (diet3.checked) {
+    values.push(diet3.value);
+  }
+
+  if (values.length !== 0) {
     query += '&diet=';
-    if (diet1) query += `,${diet1.value}`;
-    if (diet2) query += `,${diet2.value}`;
-    if (diet3) query += `,${diet3.value}`;
+    values.forEach((val, index) => {
+      if (index !== values.length - 1) {
+        query += `${val},`;
+      } else {
+        query += `${val}`;
+      }
+    });
   }
 };
 
 const getAllergy = () => {
-  const allergy1 = document.getElementById('allergy1').checked;
-  const allergy2 = document.getElementById('allergy2').checked;
-  const allergy3 = document.getElementById('allergy3').checked;
+  const allergy1 = document.getElementById('allergy1');
+  const allergy2 = document.getElementById('allergy2');
+  const allergy3 = document.getElementById('allergy3');
+  const values = [];
 
-  if (allergy1 || allergy2 || allergy3) {
-    query += '&intolerance=';
-    if (allergy1) query += `,${allergy1.value}`;
-    if (allergy2) query += `,${allergy2.value}`;
-    if (allergy3) query += `,${allergy3.value}`;
+  if (allergy1.checked) {
+    values.push(allergy1.value);
+  }
+
+  if (allergy2.checked) {
+    values.push(allergy2.value);
+  }
+
+  if (allergy3.checked) {
+    values.push(allergy3.value);
+  }
+
+  if (values.length !== 0) {
+    query += '&intollerance=';
+    values.forEach((val, index) => {
+      if (index !== values.length - 1) {
+        query += `${val},`;
+      } else {
+        query += `${val}`;
+      }
+    });
   }
 };
 
@@ -86,8 +120,10 @@ const SearchFilterButtonInitiator = {
       getNutrition();
       getDiet();
       getAllergy();
-      const results = await SpoonacularSource.searchRecipeByQueryLink(query);
       card.style.display = 'none';
+      const results = await SpoonacularSource.searchRecipeByQueryLink(query);
+      const title = document.querySelector('.recipes__title');
+      title.innerText = `${results.length} Recipes Found`;
       DisplayRecipesPagination.init({
         recipes: results,
       });
@@ -102,6 +138,8 @@ const SearchFilterButtonInitiator = {
       getDiet();
       getAllergy();
       const results = await SpoonacularSource.searchRecipeByQueryLink(query);
+      const title = document.querySelector('.recipes__title');
+      title.innerText = `${results.length} Recipes Found`;
       DisplayRecipesPagination.init({
         recipes: results,
       });

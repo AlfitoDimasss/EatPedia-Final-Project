@@ -1,5 +1,4 @@
 import FilterCard from './components/filter-card';
-import dummyData from '../../data/dummy-data.json';
 import SearchRecipeButtonInitiator from '../../utils/search-recipe-button-initiator';
 import FilterCardInitiator from '../../utils/filter-card-initiator';
 import SearchFilterButtonInitiator from '../../utils/search-filter-button-initiator';
@@ -45,7 +44,6 @@ const Recipes = {
     const filterButtonDesktop = document.getElementById('filterButtonDesktop');
 
     const recipes = await SpoonacularSource.getBaseRecipe();
-    // const recipes = dummyData;
 
     FilterCardInitiator.init({
       toggle: toggleFilterCard,

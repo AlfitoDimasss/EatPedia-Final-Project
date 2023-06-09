@@ -96,6 +96,10 @@ body {
 }
 
 /*
+  End AppBar
+*/
+
+/*
   Main Content
 */
 
@@ -109,13 +113,12 @@ main {
 }
 
 .section {
-  padding: 16px 32px;
+  padding: 32px;
   position: relative;
-  /* background-color: blue; */
 }
 
 /*
-  Main Content
+  End Main Content
 */
 
 
@@ -127,19 +130,17 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 460px;
-  /* background-color: aqua; */
+  min-height: 470px;
 }
 
 .jumbotron__image-box {
-  margin-bottom: 16px;
-  /* background-color: salmon; */
+  margin-bottom: 1em;
 }
 
 .jumbotron__image-box img {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
-  border-radius: 24px;
+  border-radius: 1.5em;
 }
 
 .jumbotron__desc-container {
@@ -156,7 +157,7 @@ main {
 .jumbotron__desc-container p {
   font-weight: 400;
   font-size: 1em;
-  margin: 0 auto 24px;
+  margin: 0 auto 1.5em;
   width: 90%;
 }
 
@@ -164,7 +165,7 @@ main {
   text-decoration: none;
   background-color: var(--orange);
   color: var(--white);
-  border-radius: 16px;
+  border-radius: 1em;
   padding: 6px 12px;
   font-weight: 600;
   font-size: 1.2em;
@@ -181,23 +182,22 @@ main {
 }
 
 /*
-  Jumbotron
+  End Jumbotron
 */
 
 /*
-
   About
 */
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 460px;
-  /* background-color: salmon; */
 }
 
 .about__image {
   width: 100%;
+  margin-bottom: 1em;
+  display: none;
 }
 
 .about__image img {
@@ -205,8 +205,8 @@ main {
 }
 
 .about__desc h1 {
-  font-weight: 700;
-  font-size: 1.5em;
+  font-weight: 600;
+  font-size: 2em;
   margin-bottom: 16px;
   text-align: center;
 
@@ -214,58 +214,73 @@ main {
 
 .about__desc p {
   font-weight: 400;
-  font-size: 0.9em;
-  margin: 0 auto 32px;
+  font-size: 1em;
+  margin: 0 auto;
   text-align: center;
+  width: 90%;
+}
+
+.about__decoration {
+  position: absolute;
+}
+
+.about__decoration-1 {
+  width: 64px;
+  top: 16px;
+  right: 8px;
 }
 
 /*
-About
+  End About
 */
 
 .feature {
-  min-height: 100px;
   text-align: center;
-  /* background-color: lightgreen; */
 }
 
 .feature h1 {
   font-weight: 600;
-  font-size: 1.5em;
-  margin: 10px;
-}
-
-.feature p {
-  font-weight: 400;
-  font-size: 0.9em;
+  font-size: 2em;
   margin-bottom: 16px;
 }
 
-.feature i {
-  font-size: 25px;
+.feature__description {
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0px auto 16px;
+  width: 80%;
 }
 
-.feature_container_card h3 {
+.feature__container {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  margin: 0 auto 40px;
+  max-width: 90%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+.feature__container__card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 12px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.feature__container__card i {
+  font-size: 24px;
+}
+
+.feature__container__card h3 {
   font-weight: 600;
   padding: 10px;
   font-size: 1em;
 }
 
-.feature_container {
-  display: grid;
-  gap: 16px;
-  justify-items: center;
-  max-width: 75%;
-  margin: 0 auto 40px;
-}
-
-.feature_container_card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 15px;
-  border-radius: 10px;
-  max-width: 200px;
-  width: 100%;
-  overflow: hidden;
+.feature__container__card p {
+  font-size: 0.75em;
 }
 
 .feature__decoration {
@@ -273,39 +288,39 @@ About
 }
 
 .feature__decoration-1 {
-  width: 60px;
-  top: 5px;
-  right: 5px;
+  width: 48px;
+  top: 8px;
+  right: 8px;
 }
 
 .feature__decoration-2 {
-  width: 35px;
-  top: 10px;
-  right: 70px;
+  width: 32px;
+  top: 12px;
+  right: 64px;
 }
 
 .feature__decoration-3 {
-  width: 25px;
+  width: 24px;
   top: 60px;
-  right: 3px;
+  right: 12px;
 }
 
 .feature__decoration-4 {
-  width: 40px;
-  top: 90px;
-  right: 3px;
+  width: 32px;
+  top: 88px;
+  right: 12px;
 }
 
 .feature__decoration-5 {
-  width: 70px;
-  bottom: 15px;
+  width: 64px;
+  bottom: 12px;
   left: 10px;
 }
 
 .feature__decoration-6 {
-  width: 45px;
+  width: 40px;
   bottom: 5px;
-  left: 70px;
+  left: 64px;
 }
 
 
@@ -319,21 +334,21 @@ About
 
 .latest-recipe h1 {
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 2em;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.latest-recipe p {
+.latest-recipe__description {
   font-weight: 400;
-  font-size: 0.9em;
+  font-size: 1em;
   text-align: center;
   margin-bottom: 16px;
 }
 
 .latest-recipe__recipe-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-bottom: 32px;
 }
@@ -363,16 +378,24 @@ About
 }
 
 .latest-recipe__decoration-1 {
-  width: 50px;
-  top: 5px;
-  right: 5px;
+  width: 54px;
+  top: 12px;
+  right: 8px;
 }
 
 .latest-recipe__decoration-2 {
-  width: 30px;
-  bottom: 15px;
-  left: 15px;
+  width: 48px;
+  bottom: 12px;
+  left: 12px;
 }
+
+/*
+  End Latest Recipe
+*/
+
+/*
+  Recipe Item
+*/
 
 .recipe-item {
   width: 100%;
@@ -415,13 +438,21 @@ About
   justify-content: space-around;
 }
 
+.recipe-item__content__icons__icon {
+  text-align: center;
+}
+
 .recipe-item__content__icons__icon span {
-  font-size: 0.6em;
+  font-size: 0.75em;
 }
 
 .recipe-item__content__icons__icon p {
-  font-size: 0.5em;
+  font-size: 0.625em;
 }
+
+/*
+  End Recipe Item
+*/
 
 /*
   Team
@@ -432,51 +463,53 @@ About
   text-align: center;
 }
 
-.team_container {
+.team__container {
   display: grid;
   gap: 16px;
   justify-items: center;
-  max-width: 65%;
+  max-width: 90%;
   margin: 0 auto 40px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .team h1 {
   font-weight: 600;
-  font-size: 1.5em;
-  margin: 10px;
+  font-size: 2em;
+  margin-bottom: 8px;
 }
 
-.team p {
+.team__description {
   font-weight: 400;
-  font-size: 0.9em;
+  font-size: 1em;
   margin-bottom: 16px;
 }
 
-.team a {
-  font-size: 25px;
-  padding: 2px;
-}
-
-.team_container__card {
+.team__container__card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  max-width: 200px;
   width: 100%;
   overflow: hidden;
 }
 
-.team_container__card p {
-  margin-bottom: 5px;
-}
-
-.team_container__card img {
+.team__container__card img {
   width: 100%;
-  max-height: 200px;
+  max-height: 150px;
   object-fit: cover;
+  object-position: center;
 }
 
-.team_container__card___content {
+.team__container__card___content {
   padding: 8px;
+}
+
+.team__container__card___content p {
+  margin-bottom: 8px;
+  font-size: 0.75em;
+}
+
+.team__container__card___content a {
+  font-size: 1.25em;
+  padding: 4px;
 }
 
 .team__decoration {
@@ -484,16 +517,20 @@ About
 }
 
 .team__decoration-1 {
-  width: 40px;
+  width: 48px;
   bottom: 5px;
   left: 10px;
 }
 
 .team__decoration-2 {
   width: 80px;
-  top: -5px;
+  top: 4px;
   right: 8px;
 }
+
+/*
+  End Team
+*/
 
 /*
   Recipe List
