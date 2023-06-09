@@ -1,8 +1,8 @@
 const Team = () => `
     <section class="section">
         <div class="team">
-            <h1>Temui Tim Kami</h1>
-            <p>Kami terus berusaha untuk menciptakan produk yang berguna untuk masyarakat luas.</p>
+            <h1>Meet Our Team</h1>
+            <p>We will continue to create products that are useful for the wider society.</p>
             <div class="team_container">
                 <div class="team_container__card">
                     <img src="./images/alfito-photo.png" alt="Alfito Dimas Prasetyo">    

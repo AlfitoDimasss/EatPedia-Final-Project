@@ -6,7 +6,7 @@ const About = () => `
       </div>
       <div class="about__desc">
         <h1>EatPedia</h1>
-        <p>Website ini dibuat untuk menjadi sumber informasi dan inspirasi bagi para pecinta masakan di seluruh dunia, serta membantu mencapai tujuan pembangunan berkelanjutan yang ditetapkan oleh PBB</p>
+        <p>This website was created to serve as a source of information and inspiration for cooking enthusiasts around the world, also helping achieve the sustainable development goals set by the United Nations.</p>
       </div>
     </div>
   </section>

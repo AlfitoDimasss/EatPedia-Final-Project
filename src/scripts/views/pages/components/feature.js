@@ -1,28 +1,28 @@
 const Feature = () => `
 <section class="section">
     <div class="feature">
-        <h1>Fitur Kami</h1>
-        <p>Berikut fitur yang tersedia pada website kami</p>
+        <h1>Our Feature</h1>
+        <p>Below are the available features on our website</p>
         <div class="feature_container">
             <div class="feature_container_card">
                 <i class="fa-regular fa-bookmark"></i>    
                 <h3>Bookmark</h3>
-                <p>Dengan fitur ini anda dapat menyimpan resep yang anda inginkan</p>
+                <p>You can save the recipe you want with this feature</p>
             </div>
             <div class="feature_container_card">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <h3>Search</h3>
-                <p>Anda dapat mencari resep yang anda inginkan dengan fitur ini</p>
+                <p>You can search for the recipe you want with this feature</p>
             </div>
             <div class="feature_container_card">
                 <i class="fa-regular fa-newspaper"></i>
                 <h3>Article</h3>
-                <p>Fitur ini berisi artikel-artikel tentang makanan</p>
+                <p>You can read articles about food</p>
             </div>
             <div class="feature_container_card">
                 <i class="fa-solid fa-filter"></i>
                 <h3>Filter</h3>
-                <p>Anda dapat mencari resep sesuai kategori yang anda inginkan</p>
+                <p>You can search for recipes according to the category you want</p>
             </div>
         </div>
     </div>
