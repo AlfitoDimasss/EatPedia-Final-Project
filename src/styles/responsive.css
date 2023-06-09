@@ -1,13 +1,3 @@
-@media screen and (min-width: 414px) {
-  .feature_container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .team_container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media screen and (min-width: 768px) {
   .app-bar {
     grid-template-columns: 1fr auto;
@@ -39,21 +29,33 @@
   }
 
   .section {
-    padding: 16px 40px;
+    padding: 40px;
   }
 
   .jumbotron__image-box {
-    max-width: 75%;
+    max-width: 100%;
+  }
+
+  .jumbotron__desc-container h1 {
+    font-size: 3em;
+  }
+
+  .jumbotron__desc-container p {
+    font-size: 1.25em;
+  }
+
+  .jumbotron__desc-container a {
+    font-size: 1.25em;
   }
 
   .about {
-    display: flex;
     flex-direction: row;
     align-items: center;
   }
 
   .about__image {
     width: 50%;
+    display: block;
   }
 
   .about__desc {
@@ -61,67 +63,86 @@
   }
 
   .about__desc h1 {
-    font-size: 2em;
+    font-size: 3em;
     text-align: right;
   }
 
   .about__desc p {
-    font-size: 16px;
+    font-size: 1.25em;
     text-align: right;
+    margin: 0 0 0 auto;
   }
 
-  .feature_container_card h3 {
-    font-size: 1em;
+  .about__decoration {
+    display: none;
   }
 
-  .feature_container_card p {
-    font-size: 0.75em;
+  .feature h1 {
+    font-size: 3em;
   }
 
-  .feature_container {
+  .feature__description {
+    font-size: 1.25em;
+  }
+
+  .feature__container {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .feature__container__card h3 {
+    font-size: 1.125em;
+  }
+
+  .feature__container__card p {
+    font-size: 0.875em;
+  }
+
   .feature__decoration-1 {
-    width: 100px;
-    top: 5px;
-    right: 5px;
+    width: 64px;
+    top: 8px;
+    right: 8px;
   }
 
   .feature__decoration-2 {
-    width: 50px;
-    top: 10px;
-    right: 120px;
+    width: 40px;
+    top: 12px;
+    right: 80px;
   }
 
   .feature__decoration-3 {
-    width: 50px;
-    top: 110px;
-    right: 3px;
+    width: 32px;
+    top: 72px;
+    right: 12px;
   }
 
   .feature__decoration-4 {
-    width: 70px;
-    top: 150px;
-    right: 3px;
+    width: 32px;
+    top: 108px;
+    right: 12px;
   }
 
   .feature__decoration-5 {
-    width: 100px;
-    bottom: 15px;
+    width: 72px;
+    bottom: 12px;
     left: 10px;
   }
 
   .feature__decoration-6 {
-    width: 50px;
+    width: 48px;
     bottom: 5px;
-    left: 90px;
+    left: 72px;
+  }
 
+  .latest-recipe h1 {
+    font-size: 3em;
+  }
+
+  .latest-recipe__description {
+    font-size: 1.25em;
   }
 
   .latest-recipe__recipe-container {
-    max-width: 50%;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin: 0 auto 40px;
   }
 
@@ -141,7 +162,15 @@
     left: 15px;
   }
 
-  .team_container {
+  .team h1 {
+    font-size: 3em;
+  }
+
+  .team__description {
+    font-size: 1.25em;
+  }
+
+  .team__container {
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -262,6 +291,7 @@
 
   .jumbotron__desc-container a {
     text-align: center;
+    font-size: 1.5em;
     width: 30%;
   }
 
@@ -281,13 +311,13 @@
   }
 
   .about__desc h1 {
-    font-size: 48px;
+    font-size: 4em;
     text-align: right;
 
   }
 
   .about__desc p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     text-align: right;
   }
 
@@ -295,30 +325,35 @@
     width: 48%;
   }
 
-
   .feature h1 {
-    font-size: 2em;
+    font-size: 4em;
   }
 
-  .feature_container_card h3 {
-    font-size: 1.2em;
+  .feature__description {
+    font-size: 1.5em;
+  }
+
+  .feature__container {
+    max-width: 60%;
+  }
+
+  .feature__container__card h3 {
+    font-size: 1.25em;
   }
 
   .feature_container_card p {
     font-size: 1em;
-
   }
 
   .latest-recipe h1 {
-    font-size: 2em;
+    font-size: 4em;
     text-align: left;
     max-width: 75%;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
   }
 
   .latest-recipe p {
-    font-size: 1em;
+    font-size: 1.5em;
     text-align: left;
     max-width: 75%;
     margin-right: auto;
@@ -332,11 +367,11 @@
   }
 
   .recipe-item .recipe-item__content h3 {
-    font-size: 0.8em;
+    font-size: 0.875em;
   }
 
   .recipe-item__content__icons__icon span {
-    font-size: 0.75em;
+    font-size: 0.875em;
   }
 
   .recipe-item__content__icons__icon p {
@@ -345,6 +380,7 @@
 
   .latest-recipe__btn-selengkapnya {
     width: 15%;
+    font-size: 1.5em;
   }
 
   .latest-recipe__decoration-1 {
@@ -357,6 +393,35 @@
     width: 70px;
     bottom: 15px;
     left: 15px;
+  }
+
+  .team h1 {
+    font-size: 4em;
+  }
+
+  .team__description {
+    font-size: 1.5em;
+  }
+
+  .team__container {
+    max-width: 75%;
+  }
+
+  .team__container__card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .team__container__card___content p {
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+
+  .team__container__card___content a {
+    font-size: 1.5em;
+    padding: 4px;
   }
 
   .recipes__wrapper {
@@ -375,7 +440,6 @@
   .recipes__filter-card {
     width: 100%;
   }
-
 
   .recipes__filter-toggle {
     display: none;

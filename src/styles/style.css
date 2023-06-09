@@ -115,8 +115,6 @@ main {
 .section {
   padding: 32px;
   position: relative;
-  /* background-color: aqua; */
-  border: 1px solid black;
 }
 
 /*
@@ -239,7 +237,7 @@ main {
 .feature h1 {
   font-weight: 600;
   font-size: 2em;
-  margin: 10px;
+  margin-bottom: 16px;
 }
 
 .feature__description {
@@ -334,10 +332,10 @@ main {
   font-weight: 600;
   font-size: 2em;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.latest-recipe p {
+.latest-recipe__description {
   font-weight: 400;
   font-size: 1em;
   text-align: center;
