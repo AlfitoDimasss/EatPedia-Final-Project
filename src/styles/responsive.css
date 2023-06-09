@@ -47,6 +47,10 @@
   .jumbotron__desc-container a {
     font-size: 1.25em;
   }
+  
+  .jumbotron__desc-container p {
+    font-size: 1.2em;
+  }
 
   .about {
     flex-direction: row;
@@ -71,6 +75,10 @@
     font-size: 1.25em;
     text-align: right;
     margin: 0 0 0 auto;
+  }
+  
+  .feature p {
+    font-size: 1em;
   }
 
   .about__decoration {
@@ -160,6 +168,10 @@
     width: 60px;
     bottom: 15px;
     left: 15px;
+  }
+  
+  .team p {
+    font-size: 1em;
   }
 
   .team h1 {
@@ -311,6 +323,7 @@
   }
 
   .about__desc h1 {
+    font-size: 2em;
     font-size: 4em;
     text-align: right;
 
@@ -338,7 +351,7 @@
   }
 
   .feature__container__card h3 {
-    font-size: 1.25em;
+    font-size: 1.2em;
   }
 
   .feature_container_card p {
