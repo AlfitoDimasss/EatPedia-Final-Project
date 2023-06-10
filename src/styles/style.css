@@ -168,11 +168,7 @@ main {
   border-radius: 1em;
   padding: 6px 12px;
   font-weight: 600;
-  font-size: 1.2em;
-  display: block;
-  margin: 0 auto;
-  width: 40%;
-  text-align: center;
+  font-size: 1em;
 }
 
 .jumbotron__desc-container a:hover {
@@ -538,32 +534,36 @@ main {
 
 .recipes__search-bar {
   text-align: center;
-}
-
-.recipes__search-bar a {
-  padding: 18px 0px;
-}
-
-.recipes__search-bar i {
-  background-color: var(--primary);
-  padding: 6.8px 20px 11px;
-  border-radius: 0px 20px 20px 0px;
-  margin: -6px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
 }
 
 .recipes__search-bar input {
-  padding: 8px 20px;
   border-radius: 20px 0px 0px 20px;
   border-color: var(--primary);
-  font-size: 0.7em;
-  margin-bottom: 10px;
+  border-right: none;
+  font-size: 1em;
+  padding: 12px;
+}
+
+.recipes__search-bar div {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: 0px 20px 20px 0px;
+  width: 50px;
+  justify-content: center;
+}
+
+.fa-magnifying-glass {
+  font-size: 1.5em;
 }
 
 .recipes__filter-toggle {
   text-align: center;
-  font-size: 0.8em;
-  margin-top: -8px;
-  margin-bottom: 12px;
+  font-size: 1em;
+  margin-bottom: 16px;
 }
 
 .recipes__filter-toggle span {
@@ -574,9 +574,9 @@ main {
 
 .recipes__title {
   text-align: center;
-  font-weight: 600;
-  font-size: 1.3em;
-  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 16px;
 }
 
 .recipes__recipe-container {
@@ -608,7 +608,7 @@ main {
 
 .recipes__filter-card__close {
   color: var(--white);
-  font-size: 28px;
+  font-size: 2em;
   font-weight: bold;
   text-align: right;
 }
@@ -623,7 +623,7 @@ main {
 .recipes__filter-card h5 {
   color: var(--white);
   text-align: center;
-  font-size: 1.2em;
+  font-size: 2em;
   font-weight: 600;
   margin-bottom: 16px;
 }
@@ -632,6 +632,7 @@ main {
   color: white;
   font-weight: 600;
   display: block;
+  font-size: 1em;
   margin-bottom: 8px;
 }
 
@@ -639,13 +640,13 @@ main {
   font-weight: 500;
   display: block;
   margin-bottom: 8px;
-  font-size: 0.9em;
+  font-size: 0.875em;
 }
 
 .recipes__filter-card .label-inner-checkbox {
   font-weight: 500;
   display: inline;
-  font-size: 0.8em;
+  font-size: 0.875em;
 }
 
 .recipes__filter-card select {
@@ -695,14 +696,17 @@ main {
   border-radius: 20px;
   font-weight: 500;
   width: 100%;
+  font-size: 1em;
 }
 
 .recipes__filter-button__mobile {
   display: block;
+  cursor: pointer;
 }
 
 .recipes__filter-button__desktop {
   display: none;
+  cursor: pointer;
 }
 
 /*

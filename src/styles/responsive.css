@@ -47,7 +47,7 @@
   .jumbotron__desc-container a {
     font-size: 1.25em;
   }
-  
+
   .jumbotron__desc-container p {
     font-size: 1.2em;
   }
@@ -76,7 +76,7 @@
     text-align: right;
     margin: 0 0 0 auto;
   }
-  
+
   .feature p {
     font-size: 1em;
   }
@@ -169,7 +169,7 @@
     bottom: 15px;
     left: 15px;
   }
-  
+
   .team p {
     font-size: 1em;
   }
@@ -198,22 +198,21 @@
     right: 8px;
   }
 
-  .recipes__title {
-    font-size: 1.6em;
+  .recipes__search-bar input {
+    width: 50%;
+    padding: 14px;
   }
 
-  .recipes__search-bar input {
-    width: 40%;
+  .recipes__title {
+    font-size: 3em;
   }
 
   .recipes__recipe-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .recipes__filter-card {
-    width: 50%;
+    width: 45%;
   }
 
   .article__article-container {
@@ -379,6 +378,10 @@
     margin: 0 auto 40px;
   }
 
+  .recipe-item .recipe-item__content {
+    padding: 12px;
+  }
+
   .recipe-item .recipe-item__content h3 {
     font-size: 0.875em;
   }
@@ -442,6 +445,19 @@
     gap: 48px;
   }
 
+  .recipes__search-bar input {
+    padding: 16px;
+  }
+
+  .recipes__title {
+    font-size: 4em;
+    margin-block: 24px;
+  }
+
+  .recipes__filter-toggle {
+    display: none;
+  }
+
   .recipes__filter-card-wrapper {
     display: block;
     padding: 0px;
@@ -454,15 +470,6 @@
     width: 100%;
   }
 
-  .recipes__filter-toggle {
-    display: none;
-  }
-
-  .recipes__recipe-container {
-    grid-template-columns: repeat(4, 1fr);
-    align-self: flex-start;
-  }
-
   .recipes__filter-card__close {
     display: none;
   }
@@ -473,6 +480,36 @@
 
   .recipes__filter-button__desktop {
     display: block;
+  }
+
+  .recipes__filter-card label {
+    font-size: 1.25em;
+  }
+
+  .recipes__filter-card .label-inner {
+    font-size: 1em;
+  }
+
+  .recipes__filter-card .label-inner-checkbox {
+    font-size: 1em;
+  }
+
+  .recipes__filter-card__diet input {
+    margin-bottom: 0.875em;
+  }
+
+  .recipes__filter-card__allergy input {
+    margin-bottom: 0.875em;
+  }
+
+  .recipes__filter-card select {
+    border-radius: 10px;
+    padding: 8px;
+  }
+
+  .recipes__recipe-container {
+    grid-template-columns: repeat(4, 1fr);
+    align-self: flex-start;
   }
 
   .article__article-container {

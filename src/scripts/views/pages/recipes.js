@@ -1,9 +1,10 @@
+import SpoonacularSource from '../../data/spoonacular-source';
 import FilterCard from './components/filter-card';
 import SearchRecipeButtonInitiator from '../../utils/search-recipe-button-initiator';
 import FilterCardInitiator from '../../utils/filter-card-initiator';
 import SearchFilterButtonInitiator from '../../utils/search-filter-button-initiator';
 import DisplayRecipesPagination from '../../utils/display-recipes-pagination-initiator';
-import SpoonacularSource from '../../data/spoonacular-source';
+import dummyRecipeDisplay from '../../data/dummy-recipe-display.json';
 
 const Recipes = {
   async render() {
@@ -17,8 +18,10 @@ const Recipes = {
     content.innerHTML += `
       <section class="section">
         <div class="recipes__search-bar">
-          <input type="text" Placeholder="e.g pasta, pancake" id="recipesSearch">
+          <input type="text" Placeholder="i.e pasta, pancake" id="recipesSearch">
+          <div>
           <a href="javascript:void(0)" id="searchButton"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
+          </div>
         </div>
         <p class="recipes__filter-toggle">Search using <span id="filterToggle">Filter</span></p>
         <h1 class="recipes__title">Latest Recipes</h1>
@@ -43,7 +46,8 @@ const Recipes = {
     const filterButtonMobile = document.getElementById('filterButtonMobile');
     const filterButtonDesktop = document.getElementById('filterButtonDesktop');
 
-    const recipes = await SpoonacularSource.getBaseRecipe();
+    // const recipes = await SpoonacularSource.getBaseRecipe();
+    const recipes = dummyRecipeDisplay;
 
     FilterCardInitiator.init({
       toggle: toggleFilterCard,

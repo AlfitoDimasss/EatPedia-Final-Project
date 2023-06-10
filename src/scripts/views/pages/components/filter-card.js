@@ -54,8 +54,8 @@ const FilterCard = () => `
         <label for="allergy3" class="label-inner-checkbox"> Seafood</label><br>
       </div>
       <div class="recipes__filter-button-wrapper">
-        <button type"button" id="filterButtonMobile" class="recipes__filter-button__mobile">Search</button>
-        <button type"button" id="filterButtonDesktop" class="recipes__filter-button__desktop">Search</button>
+        <button type"button" id="filterButtonMobile" class="recipes__filter-button__mobile">Filter Search</button>
+        <button type"button" id="filterButtonDesktop" class="recipes__filter-button__desktop">Filter Search</button>
       </div>
     </form>
   </div>
