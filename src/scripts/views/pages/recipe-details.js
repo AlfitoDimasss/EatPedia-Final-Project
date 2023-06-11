@@ -1,19 +1,23 @@
 import UrlParser from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
 import SpoonacularSource from '../../data/spoonacular-source';
-import { createLikeButtonTemplate, createRecipeDetailTemplate } from '../templates/template-creator';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
+import { createRecipeDetailTemplate } from '../templates/template-creator';
+import { showLoader, hideLoader } from '../../utils/loader-indicator-util';
+import dummyRecipeDetail from '../../data/dummy-recipe-detail.json';
+import dummyRecipeEquipment from '../../data/dummy-recipe-equipment.json';
+import dummyRecipeInstruction from '../../data/dummy-recipe-instruction.json';
 
 const RecipesDetails = {
   async render() {
     return `
       <div class="content" id="content"></div>
       <div id="likeButtonContainer"></div>
+      <div id="loaderContainer"></div>
     `;
   },
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const { detailResponseJson, detailInstructionJson, detailEquipmentJson, detailLabelHtml } = await SpoonacularSource.getDetailRecipe(url.id);
 
     const content = document.querySelector('.content');
     content.innerHTML += `
@@ -21,9 +25,19 @@ const RecipesDetails = {
         <div class="detail__detail-container" id="detailContainer"></div>
       </section>
     `;
+    const loaderContainer = document.getElementById('loaderContainer');
+    loaderContainer.innerHTML += `
+    <div class="loader loader-detail" id="loader"></div>
+    `;
+
+    const loader = document.getElementById('loader');
+    showLoader(loader);
+    const { detailResponseJson, detailInstructionJson, detailEquipmentJson, detailLabelHtml } = await SpoonacularSource.getDetailRecipe(url.id);
+    hideLoader(loader);
 
     const detailContainer = document.getElementById('detailContainer');
     detailContainer.innerHTML += createRecipeDetailTemplate(detailResponseJson, detailEquipmentJson, detailInstructionJson, detailLabelHtml);
+    // detailContainer.innerHTML += createRecipeDetailTemplate(dummyRecipeDetail, dummyRecipeEquipment, dummyRecipeInstruction);
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
@@ -36,6 +50,18 @@ const RecipesDetails = {
         servings: detailResponseJson.servings,
       },
     });
+
+    // LikeButtonInitiator.init({
+    //   likeButtonContainer: document.querySelector('#likeButtonContainer'),
+    //   recipe: {
+    //     id: dummyRecipeDetail.id,
+    //     title: dummyRecipeDetail.title,
+    //     image: dummyRecipeDetail.image,
+    //     healthScore: dummyRecipeDetail.healthScore,
+    //     readyInMinutes: dummyRecipeDetail.readyInMinutes,
+    //     servings: dummyRecipeDetail.servings,
+    //   },
+    // });
   },
 };
 

@@ -5,11 +5,13 @@ import FilterCardInitiator from '../../utils/filter-card-initiator';
 import SearchFilterButtonInitiator from '../../utils/search-filter-button-initiator';
 import DisplayRecipesPagination from '../../utils/display-recipes-pagination-initiator';
 import dummyRecipeDisplay from '../../data/dummy-recipe-display.json';
+import { showLoader, hideLoader } from '../../utils/loader-indicator-util';
 
 const Recipes = {
   async render() {
     return `
       <div class="content" id="content"></div>
+      <div id="loaderContainer"></div>
     `;
   },
 
@@ -46,8 +48,15 @@ const Recipes = {
     const filterButtonMobile = document.getElementById('filterButtonMobile');
     const filterButtonDesktop = document.getElementById('filterButtonDesktop');
 
-    // const recipes = await SpoonacularSource.getBaseRecipe();
-    const recipes = dummyRecipeDisplay;
+    const loaderContainer = document.getElementById('loaderContainer');
+    loaderContainer.innerHTML += `
+      <div class="loader" id="loader"></div>
+    `;
+
+    const loader = document.getElementById('loader');
+    showLoader(loader);
+    const recipes = await SpoonacularSource.getBaseRecipe();
+    hideLoader(loader);
 
     FilterCardInitiator.init({
       toggle: toggleFilterCard,

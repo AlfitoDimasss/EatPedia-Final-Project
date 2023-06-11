@@ -229,15 +229,65 @@
 
   .recipe-detail__title {
     width: 100%;
+    font-size: 2em;
+    margin-bottom: 0px;
   }
 
   .recipe-detail__left-side {
-    width: 55%;
+    width: 52%;
   }
 
   .recipe-detail__right-side {
-    width: 40%;
+    width: 45%;
+  }
 
+  .recipe-detail__information {
+    padding: 0.75em;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .recipe-detail__ingredients h5 {
+    font-size: 1.25em;
+  }
+
+  .recipe-detail__ingredients ul li {
+    font-size: 0.875em;
+  }
+
+  .recipe-detail__equipments h5 {
+    font-size: 1.25em;
+  }
+
+  .recipe-detail__equipments ul li {
+    font-size: 0.875em;
+  }
+
+  .recipe-detail__instructions h5 {
+    font-size: 1.25em;
+  }
+
+  .recipe-detail__instructions ul li {
+    font-size: 0.875em;
+  }
+
+  .recipe-detail__summary h5 {
+    font-size: 1.25em;
+  }
+
+  .recipe-detail__summary ul li {
+    font-size: 0.875em;
+  }
+
+  .recipe-detail__nutritions h5 {
+    font-size: 1.25em;
+  }
+
+  .article__title {
+    font-size: 3em;
+  }
+
+  .favorite-recipes__title {
+    font-size: 3em;
   }
 
   .favorite-recipes__recipe-container {
@@ -512,6 +562,10 @@
     align-self: flex-start;
   }
 
+  .article__title {
+    font-size: 4em;
+  }
+
   .article__article-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -534,6 +588,10 @@
 
   .recipe-detail__right-side {
     width: 30%;
+  }
+
+  .favorite-recipes__title {
+    font-size: 4em;
   }
 
   .favorite-recipes__recipe-container {

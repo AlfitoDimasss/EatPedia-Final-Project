@@ -61,58 +61,59 @@ const createRecipeDetailTemplate = (recipe, equipments, instructions, detailLabe
       <img src="${recipe.image}" alt="${recipe.title}" class="recipe-detail__image">
       <div class="recipe-detail__information">
         <div class="recipe-detail__information__item">
-          <p class="recipe-detail__information__item__head">Time:</p>
-          <p class="recipe-detail__information__item__body">${recipe.readyInMinutes} Min</p>
+          <p class="recipe-detail__information__item__head">Cooking Time:</p>
+          <p class="recipe-detail__information__item__body"><i class="fa-regular fa-clock"></i> ${recipe.readyInMinutes} Min</p>
         </div>
         <div class="recipe-detail__information__item">
-          <p class="recipe-detail__information__item__head">Serving:</p>
-          <p class="recipe-detail__information__item__body">${recipe.servings} Portion</p>
+          <p class="recipe-detail__information__item__head">Serving Portion:</p>
+          <p class="recipe-detail__information__item__body"><i class="fa-solid fa-utensils"></i> ${recipe.servings}</p>
         </div>
         <div class="recipe-detail__information__item">
           <p class="recipe-detail__information__item__head">Health Score:</p>
-          <p class="recipe-detail__information__item__body">${recipe.healthScore} %</p>
+          <p class="recipe-detail__information__item__body"><i class="fa-solid fa-heart-pulse"></i> ${recipe.healthScore} %</p>
         </div>
         <div class="recipe-detail__information__item">
           <p class="recipe-detail__information__item__head">Weight Point:</p>
-          <p class="recipe-detail__information__item__body">${recipe.weightWatcherSmartPoints} Pts</p>
+          <p class="recipe-detail__information__item__body"><i class="fa-solid fa-weight-scale"></i> ${recipe.weightWatcherSmartPoints} Pts</p>
         </div>
       </div>
       <div class="recipe-detail__ingredients">
-        <h5>Ingredients<h5>
+        <h5><i class="fa-solid fa-carrot"></i> Ingredients</h5>
         <hr>
         <ul>
           ${makeIngredients(recipe.extendedIngredients)}
         </ul>
       </div>
       <div class="recipe-detail__equipments">
-        <h5>Equipments</h5>
+        <h5><i class="fa-solid fa-kitchen-set"></i> Equipments</h5>
         <hr>
         <ul>
           ${makeEquipments(equipments.equipment)}
         </ul>
       </div>
-      <div class="recipe-detail__ingredients">
-        <h5>Instruction<h5>
+      <div class="recipe-detail__instructions">
+        <h5><i class="fa-solid fa-book-open"></i> Instruction</h5>
         <hr>
         <ul>
           ${makeInstruction(instructions)}
         </ul>
       </div>
       <div class="recipe-detail__summary">
-        <h5>Summary<h5>
+        <h5><i class="fa-solid fa-lightbulb"></i> Recipe Facts<h5>
         <hr>
         <p>${recipe.summary}</p>
       </div>
     </div>
     <div class="recipe-detail__right-side">
       <div class="recipe-detail__nutritions">
-        <h5>Nutrition Facts<h5>
+        <h5><i class="fa-brands fa-nutritionix"></i> Nutritional Content<h5>
         <div class="recipe-detail__nutrition">
           ${makeNutritions(recipe.nutrition)}
         </div>
       </div>
       <div class="recipe-detail__label">
-        ${detailLabel}
+        <!-- ${detailLabel} -->
+        ${makeLabel()}
       </div>
     </div>
     

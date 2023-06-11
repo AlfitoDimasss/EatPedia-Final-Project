@@ -12,7 +12,7 @@ const Favorites = {
     const content = document.querySelector('.content');
     content.innerHTML += `
     <section class="section">
-      <h1 class="recipes__title">Favorite Recipes</h1>
+      <h1 class="favorite-recipes__title">Favorite Recipes</h1>
       <div class="favorite-recipes__recipe-container" id="favoriteRecipeContainer"></div>
     </section>
     `;
