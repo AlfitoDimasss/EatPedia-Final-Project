@@ -1,6 +1,7 @@
 import SpoonacularSource from '../data/spoonacular-source';
 import API_ENDPOINT from '../globals/api-endpoint';
 import DisplayRecipesPagination from './display-recipes-pagination-initiator';
+import { showLoader, hideLoader } from './loader-indicator-util';
 
 let query = API_ENDPOINT.BASE_SEARCH;
 
@@ -121,7 +122,9 @@ const SearchFilterButtonInitiator = {
       getDiet();
       getAllergy();
       card.style.display = 'none';
+      showLoader(document.getElementById('loader'));
       const results = await SpoonacularSource.searchRecipeByQueryLink(query);
+      hideLoader(document.getElementById('loader'));
       const title = document.querySelector('.recipes__title');
       title.innerText = `${results.length} Recipes Found`;
       DisplayRecipesPagination.init({
@@ -137,7 +140,9 @@ const SearchFilterButtonInitiator = {
       getNutrition();
       getDiet();
       getAllergy();
+      showLoader(document.getElementById('loader'));
       const results = await SpoonacularSource.searchRecipeByQueryLink(query);
+      hideLoader(document.getElementById('loader'));
       const title = document.querySelector('.recipes__title');
       title.innerText = `${results.length} Recipes Found`;
       DisplayRecipesPagination.init({

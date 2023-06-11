@@ -1,10 +1,12 @@
 import EatpediaAPISource from '../../data/eatpedia-article-source';
 import { createArticleItemTemplate } from '../templates/template-creator';
+import { showLoader, hideLoader } from '../../utils/loader-indicator-util';
 
 const Articles = {
   async render() {
     return `
       <div class="content" id="content"></div>
+      <div id="loaderContainer"></div>
     `;
   },
 
@@ -16,9 +18,16 @@ const Articles = {
       <div class="article__article-container" id="articleContainer"></div>
     </section>
     `;
-    const articleContainer = document.getElementById('articleContainer');
+    const loaderContainer = document.getElementById('loaderContainer');
+    loaderContainer.innerHTML += `
+      <div class="loader loader-detail" id="loader"></div>
+    `;
+
+    const loader = document.getElementById('loader');
+    showLoader(loader);
     const articles = await EatpediaAPISource.getArticles();
-    // const articles = dummyArticle;
+    hideLoader(loader);
+    const articleContainer = document.getElementById('articleContainer');
     articles.forEach((article) => {
       articleContainer.innerHTML += createArticleItemTemplate(article);
     });
