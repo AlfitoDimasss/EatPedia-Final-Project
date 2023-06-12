@@ -24,8 +24,8 @@ const Home = {
       ${Team()}
     `;
     const recipeContainer = document.getElementById('recipeContainer');
-    const recipes = await SpoonacularSource.latestRecipe();
-    // const recipes = dummyRecipeDisplay;
+    // const recipes = await SpoonacularSource.latestRecipe();
+    const recipes = dummyRecipeDisplay;
     recipes.forEach((recipe) => {
       recipeContainer.innerHTML += createRecipeItemTemplate(recipe);
     });

@@ -13,6 +13,9 @@ const DisplayRecipesPagination = {
       pageNumber.className = 'pagination-number';
       pageNumber.innerHTML = index;
       pageNumber.setAttribute('page-index', index);
+      if (index === 1) {
+        pageNumber.autofocus = true;
+      }
       paginationNumbers.appendChild(pageNumber);
     };
 

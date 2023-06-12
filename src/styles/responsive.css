@@ -1,11 +1,14 @@
+/* ==================== MEDIA @768PX ========================= */
 @media screen and (min-width: 768px) {
+
+  /* ==================== APP-BAR ========================= */
   .app-bar {
     grid-template-columns: 1fr auto;
     padding: 8px 32px;
   }
 
   .app-bar .app-bar__brand h1 {
-    font-size: 1.75em;
+    font-size: 2.75em;
   }
 
   .app-bar .app-bar__menu {
@@ -25,19 +28,29 @@
     display: inline-block;
     text-align: right;
     margin: 0;
-    font-size: 1em;
+    font-size: 1.25em;
   }
+
+  /* ==================== END APP-BAR ========================= */
+
+  /* ==================== MAIN ========================= */
 
   .section {
     padding: 40px;
   }
+
+  /* ==================== END MAIN ========================= */
+
+  /* ==================== HOMEPAGE ========================= */
+
+  /* -------------------- Jumbotron -------------------- */
 
   .jumbotron__image-box {
     max-width: 100%;
   }
 
   .jumbotron__desc-container h1 {
-    font-size: 3em;
+    font-size: 2.75em;
   }
 
   .jumbotron__desc-container p {
@@ -46,11 +59,12 @@
 
   .jumbotron__desc-container a {
     font-size: 1.25em;
+    padding: 6px 24px;
   }
 
-  .jumbotron__desc-container p {
-    font-size: 1.2em;
-  }
+  /* -------------------- End Jumbotron -------------------- */
+
+  /* -------------------- About -------------------- */
 
   .about {
     flex-direction: row;
@@ -67,7 +81,7 @@
   }
 
   .about__desc h1 {
-    font-size: 3em;
+    font-size: 2.75em;
     text-align: right;
   }
 
@@ -77,16 +91,16 @@
     margin: 0 0 0 auto;
   }
 
-  .feature p {
-    font-size: 1em;
-  }
-
   .about__decoration {
     display: none;
   }
 
+  /* -------------------- End About -------------------- */
+
+  /* -------------------- Features -------------------- */
+
   .feature h1 {
-    font-size: 3em;
+    font-size: 2.75em;
   }
 
   .feature__description {
@@ -98,7 +112,7 @@
   }
 
   .feature__container__card h3 {
-    font-size: 1.125em;
+    font-size: 1.25em;
   }
 
   .feature__container__card p {
@@ -141,8 +155,12 @@
     left: 72px;
   }
 
+  /* -------------------- End eatures -------------------- */
+
+  /* -------------------- Latest Recipe -------------------- */
+
   .latest-recipe h1 {
-    font-size: 3em;
+    font-size: 2.75em;
   }
 
   .latest-recipe__description {
@@ -170,12 +188,16 @@
     left: 15px;
   }
 
+  /* -------------------- End Latest Recipe -------------------- */
+
+  /* -------------------- Our Team -------------------- */
+
   .team p {
     font-size: 1em;
   }
 
   .team h1 {
-    font-size: 3em;
+    font-size: 2.75em;
   }
 
   .team__description {
@@ -184,6 +206,10 @@
 
   .team__container {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .team__container__card___content p {
+    font-size: 0.875em;
   }
 
   .team__decoration-1 {
@@ -198,13 +224,19 @@
     right: 8px;
   }
 
+  /* -------------------- End Our Team -------------------- */
+
+  /* ==================== END HOMEPAGE ==================== */
+
+  /* ==================== RECIPE SEARCH PAGE ====================*/
+
   .recipes__search-bar input {
     width: 50%;
     padding: 14px;
   }
 
   .recipes__title {
-    font-size: 3em;
+    font-size: 2.75em;
   }
 
   .recipes__recipe-container {
@@ -215,11 +247,23 @@
     width: 45%;
   }
 
+  /* ==================== END RECIPE SEARCH PAGE ====================*/
+
+  /* ==================== ARTICLES PAGE ====================*/
+
+  .article__title {
+    font-size: 2.75em;
+  }
+
   .article__article-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
   }
+
+  /* ==================== REND ARTICLES PAGE ====================*/
+
+  /* ==================== RECIPE DETAIL PAGE ====================*/
 
   .recipe-detail {
     flex-direction: row;
@@ -243,7 +287,6 @@
   }
 
   .recipe-detail__information {
-    padding: 0.75em;
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -252,7 +295,7 @@
   }
 
   .recipe-detail__ingredients ul li {
-    font-size: 0.875em;
+    font-size: 1em;
   }
 
   .recipe-detail__equipments h5 {
@@ -260,35 +303,56 @@
   }
 
   .recipe-detail__equipments ul li {
-    font-size: 0.875em;
+    font-size: 1em;
   }
 
   .recipe-detail__instructions h5 {
     font-size: 1.25em;
   }
 
-  .recipe-detail__instructions ul li {
-    font-size: 0.875em;
+  .recipe-detail__instructions ol li {
+    font-size: 1em;
   }
 
   .recipe-detail__summary h5 {
     font-size: 1.25em;
   }
 
-  .recipe-detail__summary ul li {
-    font-size: 0.875em;
+  .recipe-detail__summary p {
+    font-size: 1em;
   }
 
   .recipe-detail__nutritions h5 {
     font-size: 1.25em;
   }
 
-  .article__title {
-    font-size: 3em;
+  .recipe-detail__nutrition__item__head {
+    font-size: 0.875em;
   }
 
+  .recipe-detail__nutrition__item__body {
+    font-size: 0.75em;
+  }
+
+  .recipe-detail__similar-recipe h5 {
+    font-size: 1.25em;
+  }
+
+  .recipe-detail__similar-recipe__item p {
+    font-size: 0.875em;
+    font-weight: 500;
+  }
+
+  .recipe-detail__similar-recipe__item span {
+    font-size: 0.75em;
+  }
+
+  /* ==================== END RECIPE DETAIL PAGE ====================*/
+
+  /* ==================== FAVORITE RECIPE PAGE ====================*/
+
   .favorite-recipes__title {
-    font-size: 3em;
+    font-size: 2.75em;
   }
 
   .favorite-recipes__recipe-container {
@@ -297,11 +361,35 @@
     gap: 16px;
   }
 
+  /* ==================== END FAVORITE RECIPE PAGE ====================*/
+
+  .like {
+    width: 64px;
+    height: 64px;
+    bottom: 16px;
+    right: 40px;
+  }
+
+  .loader {
+    width: 72px;
+    height: 72px;
+    bottom: 64px;
+    right: 40px;
+  }
+
+  /* ==================== FOOTER ====================*/
+
   footer p {
     font-size: 1em;
   }
+
+  /* ==================== END FOOTER ====================*/
+
 }
 
+/* ==================== END MEDIA @768PX ========================= */
+
+/* ==================== MEDIA @1280PX ========================= */
 
 @media screen and (min-width: 1280px) {
   .app-bar {
@@ -442,7 +530,7 @@
   }
 
   .recipe-item__content__icons__icon p {
-    font-size: 0.75em;
+    font-size: 0.625em;
   }
 
   .latest-recipe__btn-selengkapnya {

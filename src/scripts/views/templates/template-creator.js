@@ -2,13 +2,13 @@ import { makeIngredients, makeInstruction, makeNutritions, makeLabel, makeEquipm
 
 const createLikeButtonTemplate = () => `
   <button aria-label="like this recipe" id="likeButton" class="like">
-  <i class="fa-regular fa-star" aria-hidden="true"></i>
+    <i class="fa-regular fa-star" aria-hidden="true"></i>
   </button>
   `;
 
 const createLikedButtonTemplate = () => `
   <button aria-label="unlike this recipe" id="likeButton" class="like">
-  <i class="fa-solid fa-star" aria-hidden="true"></i>
+    <i class="fa-solid fa-star" aria-hidden="true"></i>
   </button>
 `;
 
@@ -99,26 +99,26 @@ const createRecipeDetailTemplate = (recipe, equipments, instructions, detailLabe
         </ol>
       </div>
       <div class="recipe-detail__summary">
-        <h5><i class="fa-solid fa-lightbulb"></i> Recipe Facts<h5>
+        <h5><i class="fa-solid fa-lightbulb"></i> Recipe Facts</h5>
         <hr>
         <p>${recipe.summary}</p>
       </div>
     </div>
     <div class="recipe-detail__right-side">
       <div class="recipe-detail__nutritions">
-        <h5><i class="fa-brands fa-nutritionix"></i> Nutritional Content<h5>
+        <h5><i class="fa-brands fa-nutritionix"></i> Nutritional Content</h5>
         <div class="recipe-detail__nutrition">
           ${makeNutritions(recipe.nutrition)}
         </div>
       </div>
       <div class="recipe-detail__similar-recipe">
-        <h5><i class="fa-solid fa-kitchen-set"></i> Similar Recipes<h5>
+        <h5><i class="fa-solid fa-kitchen-set"></i> Similar Recipes</h5>
         <ul>
           ${makeSimilarRecipe(similar)}
         </ul>
       </div>
       <div class="recipe-detail__label">
-        ${detailLabel}
+        <!-- ${detailLabel} -->
         <!-- ${makeLabel()} -->
       </div>
     </div>
