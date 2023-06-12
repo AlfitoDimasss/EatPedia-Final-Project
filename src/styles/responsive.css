@@ -225,6 +225,7 @@
     flex-direction: row;
     gap: 1em;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .recipe-detail__title {
@@ -234,11 +235,11 @@
   }
 
   .recipe-detail__left-side {
-    width: 52%;
+    width: 53%;
   }
 
   .recipe-detail__right-side {
-    width: 45%;
+    width: 44%;
   }
 
   .recipe-detail__information {
@@ -583,11 +584,11 @@
   }
 
   .recipe-detail__left-side {
-    width: 64%;
+    width: 70%;
   }
 
   .recipe-detail__right-side {
-    width: 30%;
+    width: 26%;
   }
 
   .favorite-recipes__title {

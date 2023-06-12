@@ -111,15 +111,15 @@ const createRecipeDetailTemplate = (recipe, equipments, instructions, detailLabe
           ${makeNutritions(recipe.nutrition)}
         </div>
       </div>
-      <div class="recipe-detail__label">
-        ${detailLabel}
-        <!-- ${makeLabel()} -->
-      </div>
       <div class="recipe-detail__similar-recipe">
         <h5><i class="fa-solid fa-kitchen-set"></i> Similar Recipes<h5>
         <ul>
           ${makeSimilarRecipe(similar)}
         </ul>
+      </div>
+      <div class="recipe-detail__label">
+        ${detailLabel}
+        <!-- ${makeLabel()} -->
       </div>
     </div>
     
