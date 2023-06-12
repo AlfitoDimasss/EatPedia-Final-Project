@@ -1,4 +1,4 @@
-import { makeIngredients, makeInstruction, makeNutritions, makeLabel, makeEquipments } from '../../utils/detail-recipe-utilities';
+import { makeIngredients, makeInstruction, makeNutritions, makeLabel, makeEquipments, makeSimilarRecipe } from '../../utils/detail-recipe-utilities';
 
 const createLikeButtonTemplate = () => `
   <button aria-label="like this recipe" id="likeButton" class="like">
@@ -54,7 +54,7 @@ const createArticleItemTemplate = (article) => `
   </div>
 `;
 
-const createRecipeDetailTemplate = (recipe, equipments, instructions, detailLabel) => `
+const createRecipeDetailTemplate = (recipe, equipments, instructions, detailLabel, similar) => `
   <div class="recipe-detail">
     <h1 class="recipe-detail__title">${recipe.title}</h1>
     <div class="recipe-detail__left-side">
@@ -85,7 +85,7 @@ const createRecipeDetailTemplate = (recipe, equipments, instructions, detailLabe
         </ul>
       </div>
       <div class="recipe-detail__equipments">
-        <h5><i class="fa-solid fa-kitchen-set"></i> Equipments</h5>
+        <h5><i class="fa-solid fa-blender"></i> Equipments</h5>
         <hr>
         <ul>
           ${makeEquipments(equipments.equipment)}
@@ -94,9 +94,9 @@ const createRecipeDetailTemplate = (recipe, equipments, instructions, detailLabe
       <div class="recipe-detail__instructions">
         <h5><i class="fa-solid fa-book-open"></i> Instruction</h5>
         <hr>
-        <ul>
+        <ol>
           ${makeInstruction(instructions)}
-        </ul>
+        </ol>
       </div>
       <div class="recipe-detail__summary">
         <h5><i class="fa-solid fa-lightbulb"></i> Recipe Facts<h5>
@@ -112,8 +112,14 @@ const createRecipeDetailTemplate = (recipe, equipments, instructions, detailLabe
         </div>
       </div>
       <div class="recipe-detail__label">
-        <!-- ${detailLabel} -->
-        ${makeLabel()}
+        ${detailLabel}
+        <!-- ${makeLabel()} -->
+      </div>
+      <div class="recipe-detail__similar-recipe">
+        <h5><i class="fa-solid fa-kitchen-set"></i> Similar Recipes<h5>
+        <ul>
+          ${makeSimilarRecipe(similar)}
+        </ul>
       </div>
     </div>
     

@@ -6,6 +6,7 @@ import { showLoader, hideLoader } from '../../utils/loader-indicator-util';
 import dummyRecipeDetail from '../../data/dummy-recipe-detail.json';
 import dummyRecipeEquipment from '../../data/dummy-recipe-equipment.json';
 import dummyRecipeInstruction from '../../data/dummy-recipe-instruction.json';
+import dummyRecipeSimilar from '../../data/dummy-recipe-similar.json';
 
 const RecipesDetails = {
   async render() {
@@ -32,12 +33,12 @@ const RecipesDetails = {
 
     const loader = document.getElementById('loader');
     showLoader(loader);
-    const { detailResponseJson, detailInstructionJson, detailEquipmentJson, detailLabelHtml } = await SpoonacularSource.getDetailRecipe(url.id);
+    const { detailResponseJson, detailInstructionJson, detailEquipmentJson, detailLabelHtml, detailSimilarRecipesJson } = await SpoonacularSource.getDetailRecipe(url.id);
     hideLoader(loader);
 
     const detailContainer = document.getElementById('detailContainer');
-    detailContainer.innerHTML += createRecipeDetailTemplate(detailResponseJson, detailEquipmentJson, detailInstructionJson, detailLabelHtml);
-    // detailContainer.innerHTML += createRecipeDetailTemplate(dummyRecipeDetail, dummyRecipeEquipment, dummyRecipeInstruction);
+    detailContainer.innerHTML += createRecipeDetailTemplate(detailResponseJson, detailEquipmentJson, detailInstructionJson, detailLabelHtml, detailSimilarRecipesJson);
+    // detailContainer.innerHTML += createRecipeDetailTemplate(dummyRecipeDetail, dummyRecipeEquipment, dummyRecipeInstruction, null, dummyRecipeSimilar);
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),

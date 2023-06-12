@@ -56,6 +56,7 @@ const Recipes = {
     const loader = document.getElementById('loader');
     showLoader(loader);
     const recipes = await SpoonacularSource.getBaseRecipe();
+    // const recipes = dummyRecipeDisplay;
     hideLoader(loader);
 
     FilterCardInitiator.init({

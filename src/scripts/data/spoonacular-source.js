@@ -26,19 +26,17 @@ class SpoonacularSource {
   }
 
   static async getDetailRecipe(id) {
-    console.log('fetch detail');
     const detailResponse = await fetch(`${API_ENDPOINT.DETAIL_INFORMATION(id)}`);
     const detailResponseJson = await detailResponse.json();
-    console.log('fetch instruction');
     const detailInstruction = await fetch(`${API_ENDPOINT.DETAIL_INSTRUCTION(id)}`);
     const detailInstructionJson = await detailInstruction.json();
-    console.log('fetch equipment');
     const detailEquipment = await fetch(`${API_ENDPOINT.DETAIL_EQUIPMENT(id)}`);
     const detailEquipmentJson = await detailEquipment.json();
-    console.log('fetch label');
     const detailLabel = await fetch(`${API_ENDPOINT.NUTRITION_LABEL(id)}`);
     const detailLabelHtml = await detailLabel.text();
-    return { detailResponseJson, detailInstructionJson, detailEquipmentJson, detailLabelHtml };
+    const detailSimilarRecipes = await fetch(`${API_ENDPOINT.SIMILAR_RECIPES(id)}`);
+    const detailSimilarRecipesJson = await detailSimilarRecipes.json();
+    return { detailResponseJson, detailInstructionJson, detailEquipmentJson, detailLabelHtml, detailSimilarRecipesJson };
   }
 }
 

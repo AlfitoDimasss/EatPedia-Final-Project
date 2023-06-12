@@ -931,8 +931,8 @@ main {
   margin-bottom: 0.4em;
 }
 
-.recipe-detail__instructions ul li {
-  margin-left: 1.8em;
+.recipe-detail__instructions ol li {
+  margin-left: 1.25em;
   font-size: 0.75em;
   margin-bottom: 0.4em;
   text-transform: capitalize;
@@ -968,7 +968,7 @@ main {
 }
 
 .recipe-detail__nutritions {
-  background-color: rgba(27, 25, 26, 0.5);
+  background-color: var(--orange);
   padding: 0.7em;
   border-radius: 1.1em;
   margin-bottom: 1em;
@@ -996,14 +996,47 @@ main {
 
 .recipe-detail__nutrition__item__head {
   font-weight: 600;
-  font-size: 0.75em;
+  font-size: 0.625em;
   text-align: center;
 }
 
 .recipe-detail__nutrition__item__body {
-  font-size: 0.625em;
+  font-size: 0.5em;
   text-align: center;
   font-weight: 500;
+}
+
+.recipe-detail__similar-recipe {
+  background-color: var(--orange);
+  padding: 0.7em;
+  border-radius: 1.1em;
+  margin: 1em 0px;
+}
+
+.recipe-detail__similar-recipe h5 {
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+}
+
+.recipe-detail__similar-recipe__item {
+  background-color: white;
+  display: block;
+  color: var(--primary);
+  padding: 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.recipe-detail__similar-recipe__item p {
+  font-size: 0.75em;
+  font-weight: 500;
+}
+
+.recipe-detail__similar-recipe__item span {
+  font-size: 0.625em;
 }
 
 .like {

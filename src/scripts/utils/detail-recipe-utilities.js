@@ -25,13 +25,15 @@ const makeInstruction = (instructions) => {
 const makeNutritions = (nutrition) => {
   let item = '';
   if (nutrition.length !== 0) {
-    nutrition.nutrients.forEach((n) => {
-      item += `
-      <div class="recipe-detail__nutrition__item">
-        <p class="recipe-detail__nutrition__item__head">${Math.floor(n.amount)}${n.unit}</p>
-        <p class="recipe-detail__nutrition__item__body">${n.name}</p>
-      </div>
-      `;
+    nutrition.nutrients.forEach((n, index) => {
+      if (index < 9) {
+        item += `
+          <div class="recipe-detail__nutrition__item">
+            <p class="recipe-detail__nutrition__item__head">${Math.floor(n.amount)}${n.unit}</p>
+            <p class="recipe-detail__nutrition__item__body">${n.name}</p>
+          </div>
+        `;
+      }
     });
   } else {
     item += `
@@ -52,6 +54,28 @@ const makeEquipments = (equipments) => {
     });
   } else {
     list += '<li>No Data</li>';
+  }
+  return list;
+};
+
+const makeSimilarRecipe = (recipes) => {
+  let list = '';
+  if (recipes.length !== 0) {
+    recipes.forEach((r, index) => {
+      if (index < 5) {
+        list += `
+        <li>
+          <a href="/#/detail/${r.id}"class="recipe-detail__similar-recipe__item">
+            <p>${r.title}</p>
+            <span><i class="fa-regular fa-clock"></i> ${r.readyInMinutes} |</span>
+            <span><i class="fa-solid fa-utensils"></i> ${r.servings}</span>
+          </a>
+        </li>
+        `;
+      }
+    });
+  } else {
+    list += 'No Data';
   }
   return list;
 };
@@ -210,4 +234,4 @@ const makeLabel = () => `
     </section>
   `;
 
-export { makeIngredients, makeInstruction, makeNutritions, makeLabel, makeEquipments };
+export { makeIngredients, makeInstruction, makeNutritions, makeLabel, makeEquipments, makeSimilarRecipe };
