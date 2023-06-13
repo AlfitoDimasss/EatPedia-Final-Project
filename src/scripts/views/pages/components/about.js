@@ -6,10 +6,10 @@ const About = () => `
       </div>
       <div class="about__desc">
         <h1>EatPedia</h1>
-        <p>This website was created to serve as a source of information and inspiration for cooking enthusiasts around the world, also helping achieve the sustainable development goals set by the United Nations.</p>
+        <p>This website was created to serve as a source of information and inspiration for cooking enthusiasts around the world, also makes it easy to search for recipes based on needs and preferences</p>
       </div>
     </div>
-    <img src="./images/blueberries.png" alt="Blueberries" class="about__decoration about__decoration-1">
+    <img src="./images/blueberries.png" alt="Blueberries" class="about__decoration about__decoration-1" crossorigin="anonymous">
   </section>
 `;
 export default About;

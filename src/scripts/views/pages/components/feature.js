@@ -26,12 +26,12 @@ const Feature = () => `
             </div>
         </div>
     </div>
-    <img src="./images/round-bread.png" alt="Round Bread" class="feature__decoration feature__decoration-1">
-    <img src="./images/blueberry.png" alt="blueberry" class="feature__decoration feature__decoration-2">
-    <img src="./images/blueberry-1.png" alt="blueberry" class="feature__decoration feature__decoration-3">
-    <img src="./images/blueberry.png" alt="blueberry" class="feature__decoration feature__decoration-4">
-    <img src="./images/chicken.png" alt="chicken" class="feature__decoration feature__decoration-5">
-    <img src="./images/chicken-1.png" alt="chicken" class="feature__decoration feature__decoration-6">
+    <img src="./images/round-bread.png" alt="Round Bread" class="feature__decoration feature__decoration-1" crossorigin="anonymous">
+    <img src="./images/blueberry.png" alt="blueberry" class="feature__decoration feature__decoration-2" crossorigin="anonymous">
+    <img src="./images/blueberry-1.png" alt="blueberry" class="feature__decoration feature__decoration-3" crossorigin="anonymous">
+    <img src="./images/blueberry.png" alt="blueberry" class="feature__decoration feature__decoration-4" crossorigin="anonymous">
+    <img src="./images/chicken.png" alt="chicken" class="feature__decoration feature__decoration-5" crossorigin="anonymous">
+    <img src="./images/chicken-1.png" alt="chicken" class="feature__decoration feature__decoration-6" crossorigin="anonymous">
 </section>
 `;
 

@@ -6,8 +6,8 @@ const LatestRecipe = () => `
       <div class="latest-recipe__recipe-container" id="recipeContainer"></div>
       <a href="#/recipes" class="latest-recipe__btn-selengkapnya">See More</a>
     </div>
-    <img src="./images/honey.png" alt="Honey" crossorigin="anonymous" class="latest-recipe__decoration latest-recipe__decoration-1">
-    <img src="./images/peach.png" alt="Peach" crossorigin="anonymous" class="latest-recipe__decoration latest-recipe__decoration-2">
+    <img src="./images/honey.png" alt="Honey" crossorigin="anonymous" class="latest-recipe__decoration latest-recipe__decoration-1" crossorigin="anonymmous">
+    <img src="./images/peach.png" alt="Peach" crossorigin="anonymous" class="latest-recipe__decoration latest-recipe__decoration-2" crossorigin="anonymmous">
   </section>
 `;
 

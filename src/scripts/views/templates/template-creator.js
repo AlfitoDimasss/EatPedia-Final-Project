@@ -16,7 +16,7 @@ const createRecipeItemTemplate = (recipe) => `
 <div class="recipe-item">
   <div class="recipe-item__header">
     <img class="recipe-item__header__poster" alt="${recipe.title}"
-        src="${recipe.image || 'https://picsum.photos/id/666/800/450?grayscale'}">
+        src="${recipe.image || 'https://picsum.photos/id/666/800/450?food'}" crossorigin="anonymmous">
   </div>
   <div class="recipe-item__content">
     <h3><a href="/#/detail/${recipe.id}">${recipe.title}</a></h3>
@@ -45,7 +45,7 @@ const createArticleItemTemplate = (article) => `
   <div class="article-item">
     <div class="article-item__header">
       <img class="article-item__header__poster" 
-        src="${article.image}"
+        src="${article.image}" crossorigin="anonymmous">
     </div>
     <div class="article-item__content">
       <h3><a href="${article.link}" target="_blank">${article.title}</a></h3>
@@ -58,7 +58,7 @@ const createRecipeDetailTemplate = (recipe, equipments, instructions, detailLabe
   <div class="recipe-detail">
     <h1 class="recipe-detail__title">${recipe.title}</h1>
     <div class="recipe-detail__left-side">
-      <img src="${recipe.image}" alt="${recipe.title}" class="recipe-detail__image">
+      <img src="${recipe.image}" alt="${recipe.title}" class="recipe-detail__image" crossorigin="anonymmous">
       <div class="recipe-detail__information">
         <div class="recipe-detail__information__item">
           <p class="recipe-detail__information__item__head">Cooking Time:</p>
@@ -118,7 +118,7 @@ const createRecipeDetailTemplate = (recipe, equipments, instructions, detailLabe
         </ul>
       </div>
       <div class="recipe-detail__label">
-        <!-- ${detailLabel} -->
+        ${detailLabel}
         <!-- ${makeLabel()} -->
       </div>
     </div>

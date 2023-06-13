@@ -586,7 +586,8 @@ main {
   border: 1px solid var(--primary);
 }
 
-.pagination-number:focus {
+.pagination-number:focus,
+.pagination-number:active {
   background-color: white;
   color: var(--primary);
   border: 1px solid var(--primary);

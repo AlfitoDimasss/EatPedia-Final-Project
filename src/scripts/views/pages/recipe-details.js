@@ -33,36 +33,36 @@ const RecipesDetails = {
 
     const loader = document.getElementById('loader');
     showLoader(loader);
-    // const { detailResponseJson, detailInstructionJson, detailEquipmentJson, detailLabelHtml, detailSimilarRecipesJson } = await SpoonacularSource.getDetailRecipe(url.id);
-    // hideLoader(loader);
+    const { detailResponseJson, detailInstructionJson, detailEquipmentJson, detailLabelHtml, detailSimilarRecipesJson } = await SpoonacularSource.getDetailRecipe(url.id);
+    hideLoader(loader);
 
     const detailContainer = document.getElementById('detailContainer');
-    // detailContainer.innerHTML += createRecipeDetailTemplate(detailResponseJson, detailEquipmentJson, detailInstructionJson, detailLabelHtml, detailSimilarRecipesJson);
-    detailContainer.innerHTML += createRecipeDetailTemplate(dummyRecipeDetail, dummyRecipeEquipment, dummyRecipeInstruction, null, dummyRecipeSimilar);
-
-    // LikeButtonInitiator.init({
-    //   likeButtonContainer: document.querySelector('#likeButtonContainer'),
-    //   recipe: {
-    //     id: detailResponseJson.id,
-    //     title: detailResponseJson.title,
-    //     image: detailResponseJson.image,
-    //     healthScore: detailResponseJson.healthScore,
-    //     readyInMinutes: detailResponseJson.readyInMinutes,
-    //     servings: detailResponseJson.servings,
-    //   },
-    // });
+    detailContainer.innerHTML += createRecipeDetailTemplate(detailResponseJson, detailEquipmentJson, detailInstructionJson, detailLabelHtml, detailSimilarRecipesJson);
+    // detailContainer.innerHTML += createRecipeDetailTemplate(dummyRecipeDetail, dummyRecipeEquipment, dummyRecipeInstruction, null, dummyRecipeSimilar);
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       recipe: {
-        id: dummyRecipeDetail.id,
-        title: dummyRecipeDetail.title,
-        image: dummyRecipeDetail.image,
-        healthScore: dummyRecipeDetail.healthScore,
-        readyInMinutes: dummyRecipeDetail.readyInMinutes,
-        servings: dummyRecipeDetail.servings,
+        id: detailResponseJson.id,
+        title: detailResponseJson.title,
+        image: detailResponseJson.image,
+        healthScore: detailResponseJson.healthScore,
+        readyInMinutes: detailResponseJson.readyInMinutes,
+        servings: detailResponseJson.servings,
       },
     });
+
+    // LikeButtonInitiator.init({
+    //   likeButtonContainer: document.querySelector('#likeButtonContainer'),
+    //   recipe: {
+    //     id: dummyRecipeDetail.id,
+    //     title: dummyRecipeDetail.title,
+    //     image: dummyRecipeDetail.image,
+    //     healthScore: dummyRecipeDetail.healthScore,
+    //     readyInMinutes: dummyRecipeDetail.readyInMinutes,
+    //     servings: dummyRecipeDetail.servings,
+    //   },
+    // });
   },
 };
 

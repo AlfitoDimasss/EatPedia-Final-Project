@@ -26,7 +26,7 @@ const Articles = {
     const loader = document.getElementById('loader');
     showLoader(loader);
     const articles = await EatpediaAPISource.getArticles();
-    // hideLoader(loader);
+    hideLoader(loader);
     const articleContainer = document.getElementById('articleContainer');
     articles.forEach((article) => {
       articleContainer.innerHTML += createArticleItemTemplate(article);
