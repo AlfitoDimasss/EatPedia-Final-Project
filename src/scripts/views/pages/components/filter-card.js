@@ -23,12 +23,12 @@ const FilterCard = () => `
         <input type="text" placeholder="Min" id="minCalorie">
         <input type="text" placeholder="Max" id="maxCalorie">
       </div>
-      <label for="minCholesterol" class="label-inner">Cholesterol</label>
+      <label for="minCholesterol" class="label-inner">Cholesterol (mg)</label>
       <div class="recipes__filter-card__nutrition-wrapper">
         <input type="text" placeholder="Min" id="minCholesterol">
         <input type="text" placeholder="Max" id="maxCholesterol">
       </div>
-      <label for="minFat" class="label-inner">Fat</label>
+      <label for="minFat" class="label-inner">Fat (g)</label>
       <div class="recipes__filter-card__nutrition-wrapper">
         <input type="text" placeholder="Min" id="minFat">
         <input type="text" placeholder="Max" id="maxFat">
